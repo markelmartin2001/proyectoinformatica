@@ -87,5 +87,44 @@
 
 
 
+ <div class="contenedor2">
+    <img src="" alt="" id="img1" />
+    <p id="nombre"></p>
+    <p id="versus">VS</p>
+    <img id="escudo4" src="Pictures/escudob.png">
+    <p id="nombre2">Jovellanos C.F</p>
+
+  </div>
+  </body>
+  <script>
+    let image = document.querySelector("#img1");
+    let nombre = document.querySelector("#nombre");
+    
+
+    function equipo1(logo,nombreEquipo){
+      image.setAttribute("src",logo);
+      nombre.innerHTML = nombreEquipo;
+    }
+   
+    
+    let key = "2c6e53892b4fd81a84173e6497aecc629135c4a2003d6dd8ba8edf90a02f0d3a";
+    function mostrarEquipos(idEquipo,fucionEquipo){
+
+    fetch(`https://allsportsapi.com/api/football/?&met=Teams&teamId=${idEquipo}&APIkey=${key}`)
+    .then(response =>response.json())
+    .then((equipos) => {
+      fucionEquipo(
+      equipos.result[0].team_logo,
+      equipos.result[0].team_name)
+    });
+    }
+    
+    mostrarEquipos(1340,equipo1);
+    
+   
+
+  </script>
+
+
 
 </body>

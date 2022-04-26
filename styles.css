@@ -81,6 +81,18 @@ ul, ol {
 	list-style:none;
 }
 
+#usuario {
+	color:#fff;
+	font-size: 30px;
+
+
+}
+
+#logout{
+	font-size: 24px;
+
+}
+
 .primero > li {
 	float:left;
 }

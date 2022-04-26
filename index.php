@@ -61,7 +61,7 @@
 
         <ul class="nav">
             <li><a href="">Inicio</a></li>
-            <li><a href="">Fútbol Masculino</a>
+            <li><a href="futbolMasculino.html">Fútbol Masculino</a>
                 <ul>
                     <li><a href="">Primer Equipo</a></li>
                     <li><a href="">Cantera</a></li>
@@ -70,7 +70,7 @@
             </li>
         </ul>
         </li>
-        <li><a href="">Fútbol Femenino</a>
+        <li><a href="futbolFemenino.html">Fútbol Femenino</a>
             <ul>
                 <li><a href="">Primer Equipo</a></li>
                 <li><a href="">Cantera</a></li>
@@ -81,7 +81,7 @@
 
 
 
-        <li><a href="">Estadio</a>
+        <li><a href="Estadio.html">Estadio</a>
 
         </li>
         </ul>

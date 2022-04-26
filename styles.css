@@ -292,3 +292,26 @@ body {
   font-size: 24px;
   display: block;
 }
+
+/*Para la pagina Estadio:
+
+	
+
+
+*/
+
+.fotoEstadio{
+    left: 55%;
+	top :30%;
+	position:absolute; 
+	
+}
+
+.ubicacion{
+    left: 20%;
+	top :30%;
+	width:80%;
+	height: 80%;
+	position:absolute; 
+	
+}

@@ -51,7 +51,5 @@
       <input name="password" type="password" placeholder="Contraseña">
       <input type="submit" value="Submit">
     </form>
+    <a href="index.php">Inicio</a>
   </body>
-</html>
-    </body>
-</html>

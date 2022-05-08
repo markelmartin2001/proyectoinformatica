@@ -82,6 +82,6 @@ if (!empty($_POST['nombre']) && !empty($_POST['p_apellido']) && !empty($_POST['s
         <input type="submit" name="confirm">
 
     </form>
-
+    <a href="index.php">Inicio</a>
     </body>
 </html>

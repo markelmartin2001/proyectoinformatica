@@ -1,3 +1,22 @@
+<?php
+   
+
+    require 'connectBD.php';
+
+    if (isset($_SESSION['email'])) {
+    $records = $conex->prepare('SELECT email, password FROM usuario WHERE email = :email');
+    $records->bindParam(':email', $_SESSION['email']);
+    $records->execute();
+    $results = $records->fetch(PDO::FETCH_ASSOC);
+
+    $user = null;
+
+    if (count($results) > 0) {
+        $user = $results;
+    }
+}
+
+?>
 <head>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
     <link rel="stylesheet" href="styles.css">
@@ -12,13 +31,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@665&family=IM+Fell+DW+Pica:ital@1&family=Righteous&family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
 </head>
 
-
-
 <header>
 
-        <div class="publi">
-            <img src="Pictures/publi.jpg" />
-        </div>
+        
+        <div style="width:50px; display: inline-block; position:absolute" ><img src="Pictures/publi.png" /></div>
+        
         <ul class="primero">
             <?php if(!empty($user)): ?>
                 <li><div id = usuario><?= $user['email']; ?></div></li>
@@ -27,11 +44,6 @@
                 <li><a href="signup.php">Regístrate</a></li>
                 <li><a href="login.php">Login</a></li>
             <?php endif; ?>    
-            <li><a href="">Idioma</a>
-                <ul>
-                    <li><a href="">Español</a></li>
-                    <li><a href="">Inglés</a></li>
-                </ul></li>
         </ul>
     
     <nav>
@@ -76,6 +88,7 @@
             <li><a href="">Tour</a></li>
             
         </ul>
+
 
     </nav>
     </header>

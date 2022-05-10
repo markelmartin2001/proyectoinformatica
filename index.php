@@ -1,22 +1,5 @@
-<?php
-    session_start();
+<?php session_start();?>
 
-    require 'connectBD.php';
-
-    if (isset($_SESSION['email'])) {
-    $records = $conex->prepare('SELECT email, password FROM usuario WHERE email = :email');
-    $records->bindParam(':email', $_SESSION['email']);
-    $records->execute();
-    $results = $records->fetch(PDO::FETCH_ASSOC);
-
-    $user = null;
-
-    if (count($results) > 0) {
-        $user = $results;
-    }
-}
-
-?>
 <!doctype html>
 <html lang="es">
 
@@ -50,66 +33,18 @@
  
 
  <div class="contenedor2">
- <img id="escudo4" src="Pictures/escudob.png">
-    <p id="nombre2"></p>
-    <p id="versus">VS</p>
     <img src="" alt="" id="img1" />
-    <p id="nombre">Jovellanos C.F</p>
+    <p id="nombre"></p>
+    <p id="versus">VS</p>
+    <img id="escudo4" src="Pictures/escudob.png">
+    <p id="nombre2">Jovellanos C.F</p>
 
   </div>
-
-
-
-    <div class="slide">
-			<div class="slide-inner">
-				<input class="slide-open" type="radio" id="slide-1" 
-			 	     name="slide" aria-hidden="true" hidden="" checked="checked">
-				<div class="slide-item">
-        <div class="contenedor2">
- <img id="escudo4" src="Pictures/escudob.png">
-    <p id="nombre2"></p>
-    <p id="versus">VS</p>
-    <img src="" alt="" id="img1" />
-    <p id="nombre">Jovellanos C.F</p>
-
-  </div>
-				</div>
-				<input class="slide-open" type="radio" id="slide-2" 
-			 	     name="slide" aria-hidden="true" hidden="">
-				<div class="slide-item">
-					<img src="https://www.migueltroyano.com/wp-content/uploads/2020/09/postgres_copy.png">
-				</div>
-				<input class="slide-open" type="radio" id="slide-3" 
-			 	     name="slide" aria-hidden="true" hidden="">
-				<div class="slide-item">
-					<img src="https://www.migueltroyano.com/wp-content/uploads/2020/09/excel_guardar_como_csv.jpg">
-				</div>
-				<label for="slide-3" class="slide-control prev control-1">‹</label>
-				<label for="slide-2" class="slide-control next control-1">›</label>
-				<label for="slide-1" class="slide-control prev control-2">‹</label>
-				<label for="slide-3" class="slide-control next control-2">›</label>
-				<label for="slide-2" class="slide-control prev control-3">‹</label>
-				<label for="slide-1" class="slide-control next control-3">›</label>
-				<ol class="slide-indicador">
-					<li>
-						<label for="slide-1" class="slide-circulo">•</label>
-					</li>
-					<li>
-						<label for="slide-2" class="slide-circulo">•</label>
-					</li>
-					<li>
-						<label for="slide-3" class="slide-circulo">•</label>
-					</li>
-				</ol>
-			</div>
-		</div>
-</body>
+  </body>
   <script>
-    
     let image = document.querySelector("#img1");
-    let nombre = document.querySelector("#nombre2");
-    let num = Math.floor((Math.random() * 80) + 1);
-
+    let nombre = document.querySelector("#nombre");
+    
 
     function equipo1(logo,nombreEquipo){
       image.setAttribute("src",logo);
@@ -124,14 +59,13 @@
     .then(response =>response.json())
     .then((equipos) => {
       fucionEquipo(
-        equipos.result[0].team_logo,
-        equipos.result[0].team_name)
+      equipos.result[0].team_logo,
+      equipos.result[0].team_name)
     });
     }
     
-    mostrarEquipos(num,equipo1);
-  
-  
+    mostrarEquipos(1340,equipo1);
+    
    
 
   </script>

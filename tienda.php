@@ -1,3 +1,22 @@
+<?php
+    session_start();
+    if (!(isset($_SESSION['email']))) {
+    echo '<script language="javascript"> window.location="index.php";
+    alert("Necesita tener cuenta");
+    </script>';
+    }
+    
+    require 'connectBD.php';
+    require 'header.php';
+
+
+    $sql = "SELECT idp,nombre,foto,precio,cantidad FROM productos ORDER BY idp ASC";
+    $consulta = $conex->prepare($sql);
+    $consulta->execute();
+    $resultados=$consulta->fetchAll(PDO::FETCH_ASSOC);
+?>
+
+
 <!doctype html>
 <html lang="es">
 
@@ -13,10 +32,48 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica:ital@1&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@665&family=IM+Fell+DW+Pica:ital@1&family=Righteous&family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+<style>
+    #prod{
+        position: absolute;
+        top:30%;
+        width:90%
+        
+    }
+    th{
+        border-top:1px solid black;
+        border-bottom:1px solid black;
+    }
+    td{
+        border-top:3px solid black;
+        width:25%;
+        height: 150px;
+    }
+
+    .comprar{
+        border:none;
+    }
+</style>
 </head>
 
 <body>
-    <?php require 'header.php'?>
-
-        
+    
+    <table id="prod" >
+        <tr>
+        <th>Nombre</th>
+        <th>Precio</th>
+        <th>Cantidad</th>
+        <th>Foto</th>
+        <th class= "comprar"></th>
+        </tr>
+        <?php
+        foreach($resultados as $resultado){?>
+        <tr>
+            <td><?php echo $resultado["nombre"]?></td>
+            <td><?php echo $resultado["precio"]?> €</td>
+            <td><?php echo $resultado["cantidad"]?></td>
+            <td><img src="productos/<?php echo $resultado["foto"]?> "/></td>
+            <td class= "comprar"><button>Comprar</button></td>
+        </tr>
+        <?php } ?>
+    </table>
 </body>

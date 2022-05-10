@@ -5,11 +5,6 @@ position: static;
 max-width: auto;
 }
 
-.publi{
- max-width: 6em;
-  display:flex;
- padding-left: 70%;
-}
 #escudo{
 	margin-top: 1em;
 	max-width: 5.5em;
@@ -36,6 +31,9 @@ ul, ol {
 	list-style:none;
 }
 
+header{
+	border-bottom: 1px rgb(4, 4, 112) solid;
+}
 .nav > li {
 	float:left;
 }
@@ -82,7 +80,7 @@ ul, ol {
 }
 
 #usuario {
-	color:#fff;
+	color:rgb(4, 4, 112);
 	font-size: 30px;
 
 
@@ -315,7 +313,6 @@ body {
 	position:absolute; 
 	
 }
-
 /*carrusel*/
 .slide {
 	position: relative;

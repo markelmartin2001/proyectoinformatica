@@ -29,26 +29,29 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica:ital@1&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@665&family=IM+Fell+DW+Pica:ital@1&family=Righteous&family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
 </head>
 
 <header>
 
         
-        <div style="width:50px; display: inline-block; position:absolute" ><img src="Pictures/publi.png" /></div>
+        <div style="max-width:5em; display: inline-block; position:absolute" ><img src="Pictures/publi.png" /></div>
         
         <ul class="primero">
-            <?php if(!empty($user)): ?>
+       
+        <img id="escudo" src="Pictures/escudo.png"> <p id="letra"> Jovellanos C.F</p>
+         <?php if(!empty($user)): ?>
                 <li><div id = usuario><?= $user['email']; ?></div></li>
-                <li id = logout><a href="logout.php">Logout</a></li>
+                <li id = logout><a href="logout.php" id="logout">Logout</a></li>
             <?php else: ?>
-                <li><a href="signup.php">Regístrate</a></li>
-                <li><a href="login.php">Login</a></li>
+                 <img id="imglog" src="Pictures/login.png"><li><a href="login.php" id="login"><h1>Login<h1></a></li>
+                <li><a href="signup.php" id="regis"> <img id="escudo5" src="Pictures/escudob.png">Regístrate</a></li>
+                
             <?php endif; ?>    
         </ul>
     
     <nav>
-        <img id="escudo" src="Pictures/escudo.png">
-        <p id="letra">Jovellanos C.F</p>
+        
 
         <ul class="nav">
             <li><a href="index.php">Inicio</a></li>

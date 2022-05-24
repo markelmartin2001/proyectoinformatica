@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 08-05-2022 a las 19:44:19
+-- Tiempo de generación: 23-05-2022 a las 21:33:01
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 8.0.10
 
@@ -20,8 +20,7 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `base_trabajo`
 --
-CREATE DATABASE IF NOT EXISTS base_trabajo;
-USE base_trabajo;
+
 -- --------------------------------------------------------
 
 --
@@ -44,11 +43,21 @@ CREATE TABLE `detalle_pedido` (
 
 CREATE TABLE `entradas` (
   `ide` int(11) NOT NULL,
-  `tipo` enum('fondo norte','fondo sur','lateral','palco') NOT NULL,
+  `tipo` varchar(30) NOT NULL,
   `precio` decimal(10,2) NOT NULL,
   `fecha` date NOT NULL,
   `cantidad` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `entradas`
+--
+
+INSERT INTO `entradas` (`ide`, `tipo`, `precio`, `fecha`, `cantidad`) VALUES
+(0, 'Fondo Norte', '40.00', '2022-05-15', 150),
+(1, 'Fondo Sur', '40.00', '2022-05-15', 150),
+(2, 'Lateral', '30.00', '2022-05-15', 400),
+(0, 'Palco', '100.00', '2022-05-15', 70);
 
 -- --------------------------------------------------------
 
@@ -74,9 +83,17 @@ CREATE TABLE `productos` (
   `nombre` varchar(80) NOT NULL,
   `foto` varchar(100) NOT NULL,
   `precio` decimal(10,2) NOT NULL,
-  `talla` enum('XS','S','M','L','XL') NOT NULL,
   `cantidad` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `productos`
+--
+
+INSERT INTO `productos` (`idp`, `nombre`, `foto`, `precio`, `cantidad`) VALUES
+(0, 'Camiseta Hombre', 'cam1.jpg', '30.00', 100),
+(1, 'Camiseta Mujer', 'cam2.jpg', '35.00', 80),
+(2, 'Chandal Equipo', 'chandal.jpg', '60.00', 50);
 
 -- --------------------------------------------------------
 

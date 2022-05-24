@@ -52,10 +52,13 @@
     .comprar{
         border:none;
     }
+
 </style>
 </head>
 
 <body>
+
+    
     
     <table id="prod" >
         <tr>
@@ -67,13 +70,20 @@
         </tr>
         <?php
         foreach($resultados as $resultado){?>
+        <form id="formulario" name="formulario" method="post" action="cart.php">
         <tr>
             <td><?php echo $resultado["nombre"]?></td>
             <td><?php echo $resultado["precio"]?> €</td>
             <td><?php echo $resultado["cantidad"]?></td>
             <td><img src="productos/<?php echo $resultado["foto"]?> "/></td>
-            <td class= "comprar"><button>Comprar</button></td>
+            <div>
+                <input name="nombre" type="hidden" id="nombre" value="<?php echo $resultado["nombre"]?>"/>
+                <input name="precio" type="hidden" id="precio" value="<?php echo $resultado["precio"]?>"/>
+                <input name="cantidad" type="hidden" id="cantidad" value="1"/>
+            </div>
+            <td class= "comprar"><button type="submit">Comprar</button></td>
         </tr>
+        </form>
         <?php } ?>
     </table>
 </body>

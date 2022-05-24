@@ -74,12 +74,12 @@
         <tr>
             <td><?php echo $resultado["nombre"]?></td>
             <td><?php echo $resultado["precio"]?> €</td>
-            <td><?php echo $resultado["cantidad"]?></td>
+            <td><input name="cantidad" type="number" id="cantidad" min="1" value="1"/></td>
             <td><img src="productos/<?php echo $resultado["foto"]?> "/></td>
             <div>
                 <input name="nombre" type="hidden" id="nombre" value="<?php echo $resultado["nombre"]?>"/>
                 <input name="precio" type="hidden" id="precio" value="<?php echo $resultado["precio"]?>"/>
-                <input name="cantidad" type="hidden" id="cantidad" value="1"/>
+                <input name="foto" type="hidden" id="foto" value="<?php echo $resultado["foto"]?>"/>
             </div>
             <td class= "comprar"><button type="submit">Comprar</button></td>
         </tr>

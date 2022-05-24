@@ -92,7 +92,6 @@
   vertical-align: top;
   white-space: nowrap;
   width: 40%;
-  z-index: 9;
   border: 0;
   transition: box-shadow .2s;
   margin-left:30%;
@@ -109,10 +108,11 @@
 <div class="grande">
 <?php
         foreach($resultados as $resultado){?>
+    <form id="formulario" name="formulario" method="post" action="cart.php">
     <div class="segundo">
 
         <div class="tercero">
-
+        
             <div class=nombre>
             <?php echo $resultado["tipo"]?>
             </div>
@@ -120,9 +120,15 @@
             <p>Fecha:<?php echo $resultado["fecha"]?></p><br>
             <p>Cantidad:<?php echo $resultado["cantidad"]?></p><br>
             </div>
-            <button class= "precio"><?php echo $resultado["precio"]?>€</button>
+            <div>
+                <input name="nombre" type="hidden" id="nombre" value="<?php echo $resultado["tipo"]?>"/>
+                <input name="precio" type="hidden" id="precio" value="<?php echo $resultado["precio"]?>"/>
+                <input name="cantidad" type="hidden" id="cantidad" value="1"/>
+            </div>
+            <button class= "precio" type="submit"><?php echo $resultado["precio"]?>€</button>
         </div>
     </div>
+    </form>
     <?php } ?>
 </div>
         

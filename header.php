@@ -67,29 +67,90 @@
 <style>
     #carrito{
         position: absolute;
-        width:20%;
+        width:30%;
         min-height:20%;
-        background-color: gray;
+        background-color: white;
+        border: solid black 3px;
         display: none;
-        border-radius: 25px;
-        left:80%;
-        top: 12%;
+        left:35%;
+        top: 10%;
         z-index: 3;
     }
 
     .centro{
         text-align: center;
+        color:white;
+        background-color: black;
     }
-    #vaciar{
-        position: absolute;
-        left: 35%;
-        bottom: 5px;
+    #botones{
+        text-align:center;
+        margin-bottom: 15px;
+        margin-top: 10px;
     }
+    
     #carro{
+
         font-size: 24px;
         color:white;
 	    left: 80%;
 	    padding-top: 0.5em;
+    }
+    .conj1{
+        text-align: left;
+        color: #000000;
+        display: inline-block;
+        margin-left:5px;
+
+    }
+
+    .conj2{
+        float: right;
+        text-align: right;
+        color: #000000;
+        margin-right:5px;
+    }
+
+    .conjunto{
+        border: 1px solid black;
+        margin-top:5px;
+        width:70%;
+    }
+
+    .cartlist{
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .vaciar {
+        background-color: red;
+        border-radius: 8px;
+        box-sizing: border-box;
+        color: #FFFFFF;
+        cursor: pointer;
+        font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        height: 40px;
+        padding: 10px 16px;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    .continuar {
+        background-color: green;
+        border-radius: 8px;
+        box-sizing: border-box;
+        color: #FFFFFF;
+        cursor: pointer;
+        font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        height: 40px;
+        padding: 10px 16px;
+        text-align: center;
+        text-decoration: none;
     }
 </style>
 <!--Carrito  -->
@@ -106,7 +167,7 @@
          <?php if(!empty($user)): ?>
                 <li><div id = usuario><?= $user['email']; ?></div></li>
                 <!--Carrito  -->
-                <li id= carro><a  onclick="mostrar()">Carrito 🛒</a></li>
+                <li id= carro><a  onclick="mostrar()">Carrito 🛒 <?php echo $totalcantidad?></a></li>
                 <!--Carrito  -->
                 <li id = logout><a href="logout.php" id="logout">Logout</a></li>
             <?php else: ?>
@@ -178,10 +239,10 @@
             ?>
             <li class="cartlist">
 
-                <div class="row col-12">
-                    <div class="col-6 p-0" style="text-align: left; color: #000000;"><h6>Cantidad: <?php echo $carrito_mio[$i]['cantidad'] ?> : <?php echo $carrito_mio[$i]['nombre']; ?></div>
-                    <div class="col-6 p-0" style="text-align: right; color: #000000;">
-                        <span style="text-align: right; color: #000000;"><?php echo $carrito_mio[$i]['precio'] ?> : <?php echo $carrito_mio[$i]['cantidad']; ?></span>
+                <div class="conjunto">
+                    <div class="conj1"><span><?php echo $carrito_mio[$i]['nombre']; ?></span></div>
+                    <div class="conj2">
+                        <span style="text-align: right; color: #000000;"><?php echo $carrito_mio[$i]['precio'] ?> € || Cantidad: <?php echo $carrito_mio[$i]['cantidad']; ?></span>
                     </div>
                 </div>
 
@@ -192,8 +253,8 @@
                 }}}}
             ?>
         </ul>
-        <li>
-            <span>Total (EUR)</span>
+        <li style="margin-bottom: 30px; margin-top: 30px; font-size:25px;  ">
+            <span style= "">Total:</span>
             <strong><?php   
             if(isset($_SESSION['carrito'])){
                 $total=0;
@@ -207,7 +268,10 @@
             echo $total;?>€</strong>
         </li>
         
-        <div id="vaciar"><a type=button style= margin-top:10px href="borrarcarro.php">Vaciar Carrito</a></div>
+        <div id="botones">
+            <a class="vaciar" type=button href="borrarcarro.php">Vaciar Carrito</a>
+            <a class="continuar" type=button href="compra.php">Continuar Pedido</a>
+        </div>
     </div>
     <!--Carrito  -->
     </header>

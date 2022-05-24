@@ -31,10 +31,22 @@ header{
 	
 	border-bottom: 1px rgb(4, 4, 112) solid;
 }
+
+
 .nav > li {
 	float:left;
-
-
+	
+ 
+   
+    background-color: rgb(20, 1, 1);
+    border-right: 0.1rem solid #a22bf1;
+    color: #fff;
+  
+   
+    
+    cursor: pointer;
+    
+    transition: background-color .3s,color .3s;
 }
 
 .nav li a {
@@ -48,6 +60,8 @@ header{
 .nav li a:hover {
 	
 	border-bottom: solid;
+	
+	
 }
 
 .nav li ul {
@@ -123,8 +137,8 @@ padding-top: 1em;
 
 	}
 	#imglog{
-		height: 3em;
-		padding-top: 1em;
+		height: 4em;
+		padding-top: 0.5em;
 		padding-left: 25%;
 		
 	} 
@@ -172,8 +186,8 @@ padding-top: 1em;
 	}
 	
 	#letra{
-		font-size: 2em;
-		font-family: 'IM Fell DW Pica', serif;
+		font-size: 1.1em;
+		font-family: 'Diplomata', cursive;
 		color:white;
 		display: flex;
 		padding-top: 2%;
@@ -320,6 +334,7 @@ padding-top: 1em;
 	#nombre2{
 		grid-area: nombre2;
 		color: #fff;
+		font-family: 'Diplomata', cursive;
 	  }
 	  
 	

@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `base_trabajo`
 --
+CREATE DATABASE  IF NOT EXISTS `base_trabajo`;
+USE `base_trabajo`;
 
 -- --------------------------------------------------------
 
@@ -27,7 +29,7 @@ SET time_zone = "+00:00";
 -- Estructura de tabla para la tabla `detalle_pedido`
 --
 
-CREATE TABLE `detalle_pedido` (
+CREATE TABLE IF NOT EXISTS  `detalle_pedido` (
   `id` int(11) NOT NULL,
   `ped_id` int(11) NOT NULL,
   `prod_id` int(11) NOT NULL,
@@ -41,7 +43,7 @@ CREATE TABLE `detalle_pedido` (
 -- Estructura de tabla para la tabla `entradas`
 --
 
-CREATE TABLE `entradas` (
+CREATE TABLE IF NOT EXISTS  `entradas` (
   `ide` int(11) NOT NULL,
   `tipo` varchar(30) NOT NULL,
   `precio` decimal(10,2) NOT NULL,
@@ -57,7 +59,7 @@ INSERT INTO `entradas` (`ide`, `tipo`, `precio`, `fecha`, `cantidad`) VALUES
 (0, 'Fondo Norte', '40.00', '2022-05-15', 150),
 (1, 'Fondo Sur', '40.00', '2022-05-15', 150),
 (2, 'Lateral', '30.00', '2022-05-15', 400),
-(0, 'Palco', '100.00', '2022-05-15', 70);
+(3, 'Palco', '100.00', '2022-05-15', 70);
 
 -- --------------------------------------------------------
 
@@ -65,7 +67,7 @@ INSERT INTO `entradas` (`ide`, `tipo`, `precio`, `fecha`, `cantidad`) VALUES
 -- Estructura de tabla para la tabla `pedidos`
 --
 
-CREATE TABLE `pedidos` (
+CREATE TABLE IF NOT EXISTS `pedidos` (
   `id` int(11) NOT NULL,
   `u_email` int(11) NOT NULL,
   `total` decimal(10,2) NOT NULL,
@@ -78,7 +80,7 @@ CREATE TABLE `pedidos` (
 -- Estructura de tabla para la tabla `productos`
 --
 
-CREATE TABLE `productos` (
+CREATE TABLE IF NOT EXISTS  `productos` (
   `idp` int(11) NOT NULL,
   `nombre` varchar(80) NOT NULL,
   `foto` varchar(100) NOT NULL,
@@ -101,7 +103,7 @@ INSERT INTO `productos` (`idp`, `nombre`, `foto`, `precio`, `cantidad`) VALUES
 -- Estructura de tabla para la tabla `usuario`
 --
 
-CREATE TABLE `usuario` (
+CREATE TABLE IF NOT EXISTS `usuario` (
   `nombre` varchar(100) NOT NULL,
   `p_apellido` varchar(100) NOT NULL,
   `s_apellido` varchar(100) NOT NULL,
@@ -139,7 +141,11 @@ ALTER TABLE `pedidos`
 --
 ALTER TABLE `productos`
   ADD PRIMARY KEY (`idp`);
-
+--
+-- Indices de la tabla `entradas`
+--
+ALTER TABLE `entradas`
+  ADD PRIMARY KEY (`ide`);
 --
 -- Indices de la tabla `usuario`
 --

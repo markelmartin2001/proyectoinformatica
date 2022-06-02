@@ -1,471 +1,480 @@
 header{
-background-color:rgb(20, 1, 1);
-max-height:5em;
-position: static;
-max-width: auto;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-* {
-	padding:0;
-	margin:0;
-}
-
-* {
-	margin:0px;
-	padding:0px;
-}
-
-#escudo{
-	width: 5em;
-	height: 5em;
-}
-ul, ol {
-	list-style:none;
-}
-
-header{
+	background-color:rgb(20, 1, 1);
+	max-height:5em;
+	position: static;
+	max-width: auto;
 	
-	border-bottom: 1px rgb(4, 4, 112) solid;
-}
-.nav > li {
-	float:left;
-
-
-}
-
-.nav li a {
-	
-   
-	text-decoration:none;
-	padding:1em 3em;
-	display:block;
-}
-
-.nav li a:hover {
-	
-	border-bottom: solid;
-}
-
-.nav li ul {
-	display:none;
-	position:absolute;
-	min-width:140px;
-}
-
-.nav li:hover > ul {
-	
-	display:block;
-}
-
-.nav li ul li {
-	position:relative;
-	
-}
-
-
-nav{
-	padding-left: 20%;
-}
-
-
-
-
-ul, ol {
-	list-style:none;
-}
-
-#usuario {
-	color:white;
-	
-	font-size: 24px;
-	padding-top: 1em;
-	margin-left: 300%;
-
-
-
-}
- #logout > a{
-
-height: 1em;
-width: 3.5em;
-}
-#logout{
-	font-size: 24px;
-	margin-left: 41%;
-	padding-top: 0.5em;
-
-}
-#login {
-padding-top: 1em;
-}
-#login , #regis , #logout{
-
-	color:white;
-	font-family: 'Black Ops One', cursive;
 	}
-#regis{
-		align-items: center;
-		display: flex;
-		justify-content: center;
-		background-color: rgb(241, 18, 48);
+	
+	img {
+		max-width: 100%;
+		max-height: 100%;
+	}
+	* {
+		padding:0;
+		margin:0;
+	}
+	
+	* {
+		margin:0px;
+		padding:0px;
+	}
+	
+	#escudo{
+		width: 5em;
+		height: 5em;
+	}
+	ul, ol {
+		list-style:none;
+	}
+	
+	header{
 		
-		border-radius: 10px;
-		max-height: 1.5em;
-	    font-size: 2em;
+		border-bottom: 1px rgb(4, 4, 112) solid;
 	}
-	
-	#regis > #escudo5{	
-		height: 2em;
-
-	}
-	#imglog{
-		height: 3em;
-		padding-top: 1em;
-		padding-left: 25%;
-		
-	} 
-	#login:hover{
-		
-		border-bottom: 5px white solid;
-	}
-	
-
-	.primero li a {
-		
-	
-		text-decoration:none;
-		padding:15px 25px;
-		display:block;
-	
-	}
-	
-	#logout :hover {
-		border-bottom: 1px white solid;
-		
-	}
-	
-	.primero li ul {
-		display:none;
-		position:absolute;
-		min-width:140px;
-	}
-	
-	.primero li:hover > ul {
-		display:block;
-	}
-	
-	.primero li ul li {
-		position:relative;
-	}
-	.primero > #escudo{
-	
-		max-width: 5em;
-	}
-	.primero{
-		padding-left: 20.5%;
-		display: flex;
-		
-	}
-	
-	#letra{
-		font-size: 2em;
-		font-family: 'IM Fell DW Pica', serif;
-		color:white;
-		display: flex;
-		padding-top: 2%;
-	}
-	.derech > li {
+	.nav > li {
 		float:left;
+	
+	
 	}
 	
-	.derech li a {
+	.nav li a {
 		
-	
+	   
 		text-decoration:none;
-		padding:10px 12px;
+		padding:1em 3em;
 		display:block;
 	}
 	
-	.derech li a:hover {
+	.nav li a:hover {
+		
 		border-bottom: solid;
 	}
 	
-	.derech li ul {
+	.nav li ul {
 		display:none;
 		position:absolute;
 		min-width:140px;
 	}
 	
-	.derech li:hover > ul {
+	.nav li:hover > ul {
+		
 		display:block;
 	}
 	
-	.derech li ul li {
+	.nav li ul li {
 		position:relative;
+		
 	}
 	
+	
+	nav{
+		padding-left: 20%;
+	}
+	
+	
+	
+	
+	ul, ol {
+		list-style:none;
+	}
+	
+	#usuario {
+		color:white;
+		
+		font-size: 24px;
+		padding-top: 1em;
+		margin-left: 300%;
+	
+	
+	
+	}
+	 #logout > a{
+	
+	height: 1em;
+	width: 3.5em;
+	}
+	#logout{
+		font-size: 24px;
+		margin-left: 41%;
+		padding-top: 0.5em;
+	
+	}
+	#login {
+	padding-top: 1em;
+	}
+	#login , #regis , #logout{
+	
+		color:white;
+		font-family: 'Black Ops One', cursive;
+		}
+	#regis{
+			align-items: center;
+			display: flex;
+			justify-content: center;
+			background-color: rgb(241, 18, 48);
+			
+			border-radius: 10px;
+			max-height: 1.5em;
+			font-size: 2em;
+		}
+		
+		#regis > #escudo5{	
+			height: 2em;
+	
+		}
+		#imglog{
+			height: 3em;
+			padding-top: 1em;
+			padding-left: 25%;
+			
+		} 
+		#login:hover{
+			
+			border-bottom: 5px white solid;
+		}
+		
+	
+		.primero li a {
+			
+		
+			text-decoration:none;
+			padding:15px 25px;
+			display:block;
+		
+		}
+		
+		#logout :hover {
+			border-bottom: 1px white solid;
+			
+		}
+		
+		.primero li ul {
+			display:none;
+			position:absolute;
+			min-width:140px;
+		}
+		
+		.primero li:hover > ul {
+			display:block;
+		}
+		
+		.primero li ul li {
+			position:relative;
+		}
+		.primero > #escudo{
+		
+			max-width: 5em;
+		}
+		.primero{
+			padding-left: 20.5%;
+			display: flex;
+			
+		}
+		
+		#letra{
+			font-size: 2em;
+			font-family: 'IM Fell DW Pica', serif;
+			color:white;
+			display: flex;
+			padding-top: 2%;
+		}
+		.derech > li {
+			float:left;
+		}
+		
+		.derech li a {
+			
+		
+			text-decoration:none;
+			padding:10px 12px;
+			display:block;
+		}
+		
+		.derech li a:hover {
+			border-bottom: solid;
+		}
+		
+		.derech li ul {
+			display:none;
+			position:absolute;
+			min-width:140px;
+		}
+		
+		.derech li:hover > ul {
+			display:block;
+		}
+		
+		.derech li ul li {
+			position:relative;
+		}
+		
+	
+		.derech{
+			padding-left: 63.5%;
+		}
+		
+		/* a par tir de aqui el css es de las noticias*/
+		#foto1{
+		
+			padding-left:8.5%;
+			max-width:100em;
+			height:100%;
+			position:relative; z-index:-1;
+			
+			
+		   } .contenedor{
+		   
+			position: relative;
+			display: inline-block;
+			text-align: center;
+			width:100%;
+			height: 48em;
+			position:relative; z-index:-1;
+			
+		}
+		
+		#titulofoto{
+			position: absolute;
+			color:white;
+			text-shadow: -2px -2px 1px #000;
+			font-size: 3em;
+			 
+			 padding-top: 0.5em;
+			font-family:  'Righteous';
+			top: 65%;
+			left: 35%;
+		}
+		#marcador{
+			position: absolute;
+			color:white;
+			text-shadow: -2px -2px 1px #000;
+			font-size: 3em;
+			 padding-left: 15%;
+			 padding-top: 0.5em;
+			font-family:  'Righteous';
+			top: 75%;
+			left: 40%;
+		}
+		   #escudo2{
+			max-width: 60px;
+			float:right;
+		
+			
+		   }
+		   #escudo3{
+			max-width: 60px;
+			float:left;
+		
+		   }
+		/*a partir de noticias:*/
+		   #noticias{
+			font-size: 1.4em;
+			 padding-left: 21%;
+			 padding-top: 0.5em;
+			font-family: 'Roboto Condensed', sans-serif;
+		}
+		
+		
+		
+		
+		body {
+			height:100%;
+			background-image: url("pictures/fondo.jpg");
+			background-size: cover;
+			background-repeat:no-repeat;
+			background-position: center center;
+		  }
+		
+		
+		
+		.contenedor2 {
+		  width: 30%;
+		  margin: 10px auto auto 50%;
+		  padding: 50px 10px;
+		  background: #3f2844;
+		  opacity: 0.8;
+		  display: grid;
+		  text-align: center;
+		  justify-content: center;
+		  justify-items: center;
+		  grid-template-columns: 296px 75px 296px;
+		  grid-template-rows: repeat(2, auto);
+		  grid-template-areas:
+			"img1 versus img2"
+			"nombre versus nombre2";
+		}
+		#img1 {
+			width: 200px;
+			min-width: 2em;
+		}
+		#versus {
+		  grid-area: versus;
+		  padding: 40px 0;
+		}
+		#escudo4 {
+			min-width: 2em;
+			float:right;
+		}
+		
+		#nombre {
+		  grid-area: nombre;
+		  color: #fff;
+		}
+		#nombre2{
+			grid-area: nombre2;
+			color: #fff;
+		  }
+		  
+		
+		.contenedor p {
+		  color: #fff;
+		  font-size: 24px;
+		  display: block;
+		}
+		
+		/*Para la pagina Estadio:
+			
+		*/
+		
+		.fotoEstadio{
+			left: 55%;
+			top :30%;
+			position:absolute; 
+			
+		}
+		
+		.ubicacion{
+			left: 20%;
+			top :30%;
+			width:80%;
+			height: 80%;
+			position:absolute; 
+			
+		}
+		.fixed-leftSd,.fixed-rightSd{position:fixed;top:7.2%;width:11%;z-index:9999;transform:translateZ(0);}
+.fixed-leftSd{left:0 ;}
+.fixed-rightSd{right:0}
 
-	.derech{
-		padding-left: 63.5%;
-	}
-	
-	/* a par tir de aqui el css es de las noticias*/
-	#foto1{
-	
-		padding-left:9%;
-		max-width:100em;
-		height:100%;
-		position:relative; z-index:-1;
+@media screen and (max-width:800px){.fixed-leftSd,.fixed-rightSd{display:none;visibility:hidden;}}
+		/*carrusel*/
+		.slide {
+			position: relative;
+			box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+			margin-top: 26px;
+		}
 		
+		.slide-inner {
+			position: relative;
+			overflow: hidden;
+			width: 100%;
+			height: calc( 300px + 3em);
+		}
 		
-	   } .contenedor{
-	   
-		position: relative;
-		display: inline-block;
-		text-align: center;
-		width:100%;
-		height: 48em;
-		position:relative; z-index:-1;
+		.slide-open:checked + .slide-item {
+			position: static;
+			opacity: 100;
+		}
 		
-	}
-	
-	#titulofoto{
-		position: absolute;
-		color:white;
-		text-shadow: -2px -2px 1px #000;
-		font-size: 3em;
-		 
-		 padding-top: 0.5em;
-		font-family:  'Righteous';
-		top: 65%;
-		left: 35%;
-	}
-	#marcador{
-		position: absolute;
-		color:white;
-		text-shadow: -2px -2px 1px #000;
-		font-size: 3em;
-		 padding-left: 15%;
-		 padding-top: 0.5em;
-		font-family:  'Righteous';
-		top: 75%;
-		left: 40%;
-	}
-	   #escudo2{
-		max-width: 60px;
-		float:right;
-	
+		.slide-item {
+			position: absolute;
+			opacity: 0;
+			-webkit-transition: opacity 0.6s ease-out;
+			transition: opacity 0.6s ease-out;
+		}
 		
-	   }
-	   #escudo3{
-		max-width: 60px;
-		float:left;
-	
-	   }
-	/*a partir de noticias:*/
-	   #noticias{
-		font-size: 1.4em;
-		 padding-left: 21%;
-		 padding-top: 0.5em;
-		font-family: 'Roboto Condensed', sans-serif;
-	}
-	
-	
-	
-	
-	
-	
-	
-	body {
-	  background: url("../futbol.jpg") center no-repeat;
-	  background-size: cover;
-	}
-	.contenedor2 {
-	  width: 30%;
-	  margin: 10px auto auto 50%;
-	  padding: 50px 10px;
-	  background: #3f2844;
-	  opacity: 0.8;
-	  display: grid;
-	  text-align: center;
-	  justify-content: center;
-	  justify-items: center;
-	  grid-template-columns: 296px 75px 296px;
-	  grid-template-rows: repeat(2, auto);
-	  grid-template-areas:
-		"img1 versus img2"
-		"nombre versus nombre2";
-	}
-	#img1 {
-		width: 200px;
-		min-width: 2em;
-	}
-	#versus {
-	  grid-area: versus;
-	  padding: 40px 0;
-	}
-	#escudo4 {
-		min-width: 2em;
-		float:right;
-	}
-	
-	#nombre {
-	  grid-area: nombre;
-	  color: #fff;
-	}
-	#nombre2{
-		grid-area: nombre2;
-		color: #fff;
-	  }
-	  
-	
-	.contenedor p {
-	  color: #fff;
-	  font-size: 24px;
-	  display: block;
-	}
-	
-	/*Para la pagina Estadio:
+		.slide-item img {
+			display: block;
+			height: auto;
+			max-width: 100%;
+		}
 		
-	*/
-	
-	.fotoEstadio{
-		left: 55%;
-		top :30%;
-		position:absolute; 
+		.slide-control {
+			background: rgba(0, 0, 0, 0.28);
+			border-radius: 50%;
+			color: #fff;
+			cursor: pointer;
+			display: none;
+			font-size: 40px;
+			height: 40px;
+			line-height: 35px;
+			position: absolute;
+			top: 50%;
+			-webkit-transform: translate(0, -50%);
+			cursor: pointer;
+			-ms-transform: translate(0, -50%);
+			transform: translate(0, -50%);
+			text-align: center;
+			width: 40px;
+			z-index: 10;
+		}
 		
-	}
-	
-	.ubicacion{
-		left: 20%;
-		top :30%;
-		width:80%;
-		height: 80%;
-		position:absolute; 
+		.slide-control.prev {
+			left: 2%;
+		}
 		
-	}
-	/*carrusel*/
-	.slide {
-		position: relative;
-		box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
-		margin-top: 26px;
-	}
-	
-	.slide-inner {
-		position: relative;
-		overflow: hidden;
-		width: 100%;
-		height: calc( 300px + 3em);
-	}
-	
-	.slide-open:checked + .slide-item {
-		position: static;
-		opacity: 100;
-	}
-	
-	.slide-item {
-		position: absolute;
-		opacity: 0;
-		-webkit-transition: opacity 0.6s ease-out;
-		transition: opacity 0.6s ease-out;
-	}
-	
-	.slide-item img {
-		display: block;
-		height: auto;
-		max-width: 100%;
-	}
-	
-	.slide-control {
-		background: rgba(0, 0, 0, 0.28);
-		border-radius: 50%;
-		color: #fff;
-		cursor: pointer;
-		display: none;
-		font-size: 40px;
-		height: 40px;
-		line-height: 35px;
-		position: absolute;
-		top: 50%;
-		-webkit-transform: translate(0, -50%);
-		cursor: pointer;
-		-ms-transform: translate(0, -50%);
-		transform: translate(0, -50%);
-		text-align: center;
-		width: 40px;
-		z-index: 10;
-	}
-	
-	.slide-control.prev {
-		left: 2%;
-	}
-	
-	.slide-control.next {
-		right: 2%;
-	}
-	
-	.slide-control:hover {
-		background: rgba(0, 0, 0, 0.8);
-		color: #aaaaaa;
-	}
-	
-	#slide-1:checked ~ .control-1,
-	#slide-2:checked ~ .control-2,
-	#slide-3:checked ~ .control-3 {
-		display: block;
-	}
-	
-	.slide-indicador {
-		list-style: none;
-		margin: 0;
-		padding: 0;
-		position: absolute;
-		bottom: 2%;
-		left: 0;
-		right: 0;
-		text-align: center;
-		z-index: 10;
-	}
-	
-	.slide-indicador li {
-		display: inline-block;
-		margin: 0 5px;
-	}
-	
-	.slide-circulo {
-		color: #828282;
-		cursor: pointer;
-		display: block;
-		font-size: 35px;
-	}
-	
-	.slide-circulo:hover {
-		color: #aaaaaa;
-	}
-	
-	#slide-1:checked ~ .control-1 ~ .slide-indicador 
-		 li:nth-child(1) .slide-circulo,
-	#slide-2:checked ~ .control-2 ~ .slide-indicador 
-		  li:nth-child(2) .slide-circulo,
-	#slide-3:checked ~ .control-3 ~ .slide-indicador 
-		  li:nth-child(3) .slide-circulo {
-		color: #428bca;
-	}
-	
-	#titulo {
-		width: 100%;
-		position: absolute;
-		padding: 0px;
-		margin: 0px auto;
-		text-align: center;
-		font-size: 27px;
-		color: rgba(255, 255, 255, 1);
-		font-family: 'Open Sans', sans-serif;
-		z-index: 9999;
-		text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), 
-			 -1px 0px 2px rgba(255, 255, 255, 0);
-	}
+		.slide-control.next {
+			right: 2%;
+		}
+		
+		.slide-control:hover {
+			background: rgba(0, 0, 0, 0.8);
+			color: #aaaaaa;
+		}
+		
+		#slide-1:checked ~ .control-1,
+		#slide-2:checked ~ .control-2,
+		#slide-3:checked ~ .control-3 {
+			display: block;
+		}
+		
+		.slide-indicador {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			position: absolute;
+			bottom: 2%;
+			left: 0;
+			right: 0;
+			text-align: center;
+			z-index: 10;
+		}
+		
+		.slide-indicador li {
+			display: inline-block;
+			margin: 0 5px;
+		}
+		
+		.slide-circulo {
+			color: #828282;
+			cursor: pointer;
+			display: block;
+			font-size: 35px;
+		}
+		
+		.slide-circulo:hover {
+			color: #aaaaaa;
+		}
+		
+		#slide-1:checked ~ .control-1 ~ .slide-indicador 
+			 li:nth-child(1) .slide-circulo,
+		#slide-2:checked ~ .control-2 ~ .slide-indicador 
+			  li:nth-child(2) .slide-circulo,
+		#slide-3:checked ~ .control-3 ~ .slide-indicador 
+			  li:nth-child(3) .slide-circulo {
+			color: #428bca;
+		}
+		
+		#titulo {
+			width: 100%;
+			position: absolute;
+			padding: 0px;
+			margin: 0px auto;
+			text-align: center;
+			font-size: 27px;
+			color: rgba(255, 255, 255, 1);
+			font-family: 'Open Sans', sans-serif;
+			z-index: 9999;
+			text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), 
+				 -1px 0px 2px rgba(255, 255, 255, 0);
+		}

@@ -17,23 +17,78 @@
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@665&family=IM+Fell+DW+Pica:ital@1&family=Righteous&family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
 </head>
 <style>
-
-.slide{
- 
-padding:10%;
-	width:21.5em;
-	height:12.3em;
-	background-image: linear-gradient(180deg,#234333 0,rgba(24,23,51,0) 10%,rgba(24,23,51,0),80%,#181733);
-  background-color:red;
+html,body{
+  margin:0;
+  padding : 0;
+  
 }
-#video{
-  margin-top:41%;
+body{
+  width: 100%;
+  height: 100%;
+  font-family: sans-serif;
+  letter-spacing: 0.03em;
+  line-height:1.6;
 
 }
 
-#video2{
-  margin-top:19%;
+.title{
+  text-align:center;
+  font-size:40px;
+  color:#6a6a6a;
+  margin-top:100px;
+  font-weight:100;
 }
+.container{
+  width: 100%;
+  max-width:1200px;
+  height: 430px;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  margin:auto;
+}
+
+.container .card{
+  width: 330px;
+  height: 430px;
+  border-radius:8px;
+  box-shadow:0 2px 2px rgba(0,0,0,0.2);
+  overflow:hidden;
+  margin:20px;
+  text-align:center;
+  transition:all 0.25s;
+}
+
+.container .card:hover{
+  transform:translateY(-15px);
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+.container .card img{
+  width: 330px;
+  height: 220px;
+}
+
+.container .card h4{
+  font-weight:600;
+}
+
+.container .card p{
+  padding:0 1rem;
+  font-size: 16px;
+  font-weight:300;
+}
+
+.container .card a{
+  font-weight:300;
+  text-decoration: none;
+  color: #3498db;
+}
+
+
+
+
+
 
   </style>
 
@@ -42,70 +97,36 @@ padding:10%;
 
 <?php require 'header.php'?>
 
-<div class="contenedores">
-    <div class="contenedor" >
-        <div id="foto1"><img src="Pictures/inicio1.jpg">
-      <p id="titulofoto">Remontada sufrida contra el colista </p> <br> <p id="marcador"><img id="escudo3" src="Pictures/Aguilas.png">1-2<img id="escudo2" src="Pictures/escudob.png"> </p>
-      </div>
+<title>Resumenes de los ultimos partidos</title>
+<div class="container">
+  <div class="card">
+    <img src="Pictures/fotopartido1.png">
+    <h4>partido1</h4>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim, ipsam error.</p>
+  <a href="#">Leer mas</a>
+  </div>
+
+  <div class="card">
+    <img src="Pictures/fotopartido1.png">
+    <h4>partido1</h4>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim, ipsam error.</p>
+  <a href="#">Leer mas</a>
+  </div>
+    
+  <div class="card">
+    <img src="Pictures/fotopartido1.png">
+    <h4>partido1</h4>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim, ipsam error.</p>
+  <a href="#">Leer mas</a>
+  </div>
+
+ 
+</div>
 </div>
 
-<div class="fixed-leftSd">
-
-    <div id="video">
-      <video width="390" height="240" autoplay loop muted>
-      <source src="pictures/anuncio.mp4" type="video/mp4">
-      </video>
-      <div class="slide">
-			<div class="slide-inner">
-				<input class="slide-open" type="radio" id="slide-1" 
-			 	     name="slide" aria-hidden="true" hidden="" checked="checked">
-				<div class="slide-item">
-					<img src="pictures/partido1.png">
-				</div>
-				<input class="slide-open" type="radio" id="slide-2" 
-			 	     name="slide" aria-hidden="true" hidden="">
-				<div class="slide-item">
-					<img src="pictures/partido2.png">
-				</div>
-				<input class="slide-open" type="radio" id="slide-3" 
-			 	     name="slide" aria-hidden="true" hidden="">
-				<div class="slide-item">
-					<img src="pictures/partido3.png">
-        </div>
-				<label for="slide-3" class="slide-control prev control-1">‹</label>
-				<label for="slide-2" class="slide-control next control-1">›</label>
-				<label for="slide-1" class="slide-control prev control-2">‹</label>
-				<label for="slide-3" class="slide-control next control-2">›</label>
-				<label for="slide-2" class="slide-control prev control-3">‹</label>
-				<label for="slide-1" class="slide-control next control-3">›</label>
-		  </div>
-    </div>
-<div id="video2">
-  <video width="390" height="240" autoplay loop muted>
-        <source src="pictures/adidas.mp4" type="video/mp4">
-  </video>
-
-</div>
-
-<div aria-label="Close Ads" class="close-fixedSd" role="button" tabindex="0" onclick="this.parentElement.style.display=&quot;none&quot;">
-
-</div>
-
-</div>
-<div class="fixed-rightSd">
-
-
-
-</div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<p>noticias<p>
-
+<?php require 'footer.php'?>
   </body>
+ 
   <script>
    /* let image = document.querySelector("#img1");
     let nombre = document.querySelector("#nombre");

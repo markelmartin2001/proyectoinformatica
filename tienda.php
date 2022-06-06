@@ -27,16 +27,14 @@
 
 
     #prods{
-        position: absolute;
+        position: relative;
         top:30%;
         width:60%;
-        
-        position: absolute;
         left:20%;
         display:flex;
         flex-wrap: wrap;
         justify-content: space-between;
-
+        margin-bottom:300px;
     }
 
     .comprar{
@@ -53,6 +51,7 @@
         display:flex;
         flex-wrap: wrap;
         box-shadow: 3px 10px 20px black;
+        height:auto;
     }
 
     #formulario{
@@ -141,7 +140,7 @@
         <?php } ?>
         
 </div>
-
+<div><?php require 'footer.php'?><div>
 </body>
 </html>
-<?php include 'footer.php'?>
+

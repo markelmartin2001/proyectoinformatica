@@ -17,11 +17,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@665&family=IM+Fell+DW+Pica:ital@1&family=Righteous&family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
 </head>
 <style>
-html,body{
-  margin:0;
-  padding : 0;
-  
-}
+
 body{
   width: 100%;
   height: 100%;
@@ -86,7 +82,12 @@ body{
 }
 
 
-
+.full{
+  position: relative;
+  top:100px;
+  margin-bottom:300px;
+  
+}
 
 
 
@@ -97,38 +98,40 @@ body{
 
 <?php require 'header.php'?>
 
-<title>Resumenes de los ultimos partidos</title>
-<div class="container">
-  <div class="card">
-    <img src="Pictures/fotopartido1.png">
-    <h4>partido1</h4>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim, ipsam error.</p>
-  <a href="#">Leer mas</a>
-  </div>
 
-  <div class="card">
-    <img src="Pictures/fotopartido1.png">
-    <h4>partido1</h4>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim, ipsam error.</p>
-  <a href="#">Leer mas</a>
-  </div>
+  <!-- <title>Resumenes de los ultimos partidos</title> -->
+  <div class=full>
+  <div class="container">
+    <div class="card">
+      <img src="Pictures/fotopartido1.png">
+      <h4>partido1</h4>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim, ipsam error.</p>
+      <a href="#">Leer mas</a>
+    </div>
+
+    <div class="card">
+      <img src="Pictures/fotopartido1.png">
+      <h4>partido1</h4>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim, ipsam error.</p>
+      <a href="#">Leer mas</a>
+    </div>
     
-  <div class="card">
-    <img src="Pictures/fotopartido1.png">
-    <h4>partido1</h4>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim, ipsam error.</p>
-  <a href="#">Leer mas</a>
-  </div>
+    <div class="card">
+      <img src="Pictures/fotopartido1.png">
+      <h4>partido1</h4>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim, ipsam error.</p>
+      <a href="#">Leer mas</a>
+    </div>
 
  
-</div>
+  </div>
 </div>
 
 
   </body>
   
  </html>
- <?php require 'footer.php'?>
+ <div><?php require 'footer.php'?><div>
   <script>
    /* let image = document.querySelector("#img1");
     let nombre = document.querySelector("#nombre");

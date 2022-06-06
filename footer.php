@@ -84,7 +84,6 @@ footer{
     width: 100%;
     background: #202020;
     color: white; 
-    position: fixed;
     bottom:0;
     height:300px;
 

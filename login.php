@@ -13,6 +13,7 @@ session_start();
 
       if($filas){
         $_SESSION['email'] = $results['email'];
+        $_SESSION['rol'] = $results['rol'];
         header("Location: /proyecto");
       }else{
         $message = "Usuario o contraseña incorrectos";

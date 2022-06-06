@@ -170,7 +170,19 @@
         <img class="escudo" src="Pictures/escudo.png"> <div id="tit"><h2 > Jovellanos C.F</h2></div>
          <?php if(!empty($user)): ?>
             <div id=emcarr>
-                <div class="email"><?= $user['email']; ?></div>
+                <div class="nav">
+                    <ul>
+                        <li>
+                            <a href=""><?= $user['email']; ?></a>
+                            <ul>
+                                <li>hola</li>
+                            <?php if($_SESSION['rol']==0): ?>
+                                <li>admin</li>
+                            <?php endif; ?> 
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
                 <!--Carrito  -->
                 <div class="car"><a  onclick="mostrar('carrito')">Carrito 🛒 <?php echo $totalcantidad?></a></div>
                 <!--Carrito  -->

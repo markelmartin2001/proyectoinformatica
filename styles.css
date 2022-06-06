@@ -1,9 +1,12 @@
 
+		
 		body {
 			background-image: url("pictures/fondo.jpg");
 			background-size: cover;
 			background-repeat:repeat;
 			background-position: center center;
+			min-height: 100vh;
+			padding: 0;
 			
 		  }		
 
@@ -538,3 +541,77 @@ margin:0;
 .total{
 height:15%;
 }
+/* Login y register */
+.formlog{
+	margin-top:7%;
+	display: flex;
+	width: 60%;
+	height: 60%;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-content: space-between;
+	align-items: center;
+	margin-left:20%;
+	border:3px solid black;
+	box-shadow: 3px 5px 10px black;
+	border-radius:3px;
+	background:black;
+  }
+
+  .divlog{
+	background:white;
+	position:absolute;
+	top:20%;
+	left:30%;
+	width:40%;
+	min-width:400px;
+	height:60%;
+	min-height:500px;
+	border:3px solid black;
+	box-shadow: 3px 5px 10px black;
+	border-radius:3px;
+
+  }
+  .mess{
+	text-align: center;
+	background:black;
+	color:white;
+  }
+
+  .inpform{
+        
+	font-family: inherit;
+	width: 80%;
+	border: 0;
+	border-bottom: 2px solid white;
+	outline: 0;
+	font-size: 1.3rem;
+	color: white;
+	padding: 7px 0;
+	background: transparent;
+	border-radius:5px;
+  }
+
+  .submit{
+	background:white;
+	height:15%;
+	width:30%;
+	border-radius:5px;
+  }
+  .submit:hover{
+	box-shadow: 0px 0px 10px white;
+  }
+
+  .sel option{
+	  background-color: black;
+  }
+
+  .sel{   
+	font-family: inherit;
+	width: 40%;
+	border: 0;
+	outline: 0;
+	font-size: 1.3rem;
+	color: white;
+	background: transparent;
+  }

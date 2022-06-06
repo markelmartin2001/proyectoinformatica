@@ -55,8 +55,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
 <!--Carrito  -->
 <script>
-    function mostrar() {
-    var x = document.getElementById("carrito");
+    function mostrar(id) {
+    var x = document.getElementById(id);
     if (x.style.display === "none") {
         x.style.display = "block";
     } else {
@@ -155,6 +155,7 @@
     #carrito ul{
         padding:0;
     }
+
 </style>
 <!--Carrito  -->
 </head>
@@ -165,13 +166,13 @@
         
         
     <div class="primero">
-        <div  ><img class="publi" src="Pictures/publi.png" /></div>
+        <!-- <div  ><img class="publi" src="Pictures/publi.png" /></div> -->
         <img class="escudo" src="Pictures/escudo.png"> <div id="tit"><h2 > Jovellanos C.F</h2></div>
          <?php if(!empty($user)): ?>
             <div id=emcarr>
                 <div class="email"><?= $user['email']; ?></div>
                 <!--Carrito  -->
-                <div class="car"><a  onclick="mostrar()">Carrito 🛒 <?php echo $totalcantidad?></a></div>
+                <div class="car"><a  onclick="mostrar('carrito')">Carrito 🛒 <?php echo $totalcantidad?></a></div>
                 <!--Carrito  -->
                 <div class="logout"><a href="logout.php">Logout</a></div>
             </div>

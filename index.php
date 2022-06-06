@@ -124,9 +124,11 @@ body{
 </div>
 </div>
 
-<?php require 'footer.php'?>
+
   </body>
- 
+  
+ </html>
+ <?php require 'footer.php'?>
   <script>
    /* let image = document.querySelector("#img1");
     let nombre = document.querySelector("#nombre");

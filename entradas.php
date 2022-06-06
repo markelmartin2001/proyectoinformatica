@@ -31,42 +31,52 @@
     flex-wrap: wrap;
     justify-content: space-around;
 	width: 50%;
-    height: 640px;
+    height: auto;
     top: 20%;
     margin-left: 25%;
 }
+
 .segundo{
-    width: 400px;
-    height: 300px;
+    width:80%;
+    height:100%;
     border: 1px solid black;
     background-color: rgb(4, 4, 112);
+    box-shadow: 3px 5px 10px black;
+    border-radius:10px;
 }
 .tercero{
     height: 100%;
     width: 100%;
+    background:white;
+    border-radius:10px;
 }
 .nombre{
     font-size: 40px;
-    background-color:rgb(149, 192, 241);
+    background-color:black;
+    color:white;
     width:100%;
     height: 20%;
     text-align:center;
+    border-top-right-radius:10px;
+    border-top-left-radius:10px;
 }
 
 .cartel{
 
     background-color:white;
-    border-radius: 25px;
-    height: 60%;
+    border-radius: 5px;
+    border:2px solid black;
+    height: 50%;
     text-align: center;
     font-size:30px;
     width:80%;
     margin-left:10%;
-    margin-top:2%;
+    margin-top:10%;
+    box-shadow: 0px 0px 10px black;
 }
 
-.cartel p{
-    padding-bottom:10px;
+.cartel p+p{
+    margin-top:10%;
 }
 
 .precio{
@@ -77,7 +87,8 @@
   color: #FFFFFF;
   cursor: pointer;
   display: inline-block;
-  font-family: Inter,-apple-system,system-ui,Roboto,"Helvetica Neue",Arial,sans-serif;
+  font-family:system-ui,"Helvetica Neue",Arial,sans-serif;
+  font-size:120%;
   height: 40px;
   line-height: 40px;
   outline: 0;
@@ -90,10 +101,8 @@
   user-select: none;
   -webkit-user-select: none;
   vertical-align: top;
-  white-space: nowrap;
   width: 40%;
   border: 0;
-  transition: box-shadow .2s;
   margin-left:30%;
   margin-top:2%;
 }
@@ -102,6 +111,13 @@
     
   box-shadow: rgba(253, 76, 0, 0.5) 0 3px 8px;
 }
+
+.forment{
+    width:50%;
+    margin-bottom:8%;
+    border-radius:10px;
+}
+
 </style>
 </head>
 
@@ -109,17 +125,18 @@
 <div class="grande">
 <?php
         foreach($resultados as $resultado){?>
-    <form id="formulario" name="formulario" method="post" action="cart.php">
+    
+    <form id="formulario" name="formulario" method="post" action="cart.php" class=forment>
+    
     <div class="segundo">
-
         <div class="tercero">
         
             <div class=nombre>
             <?php echo $resultado["tipo"]?>
             </div>
             <div class=cartel>
-            <p>Fecha:<?php echo $resultado["fecha"]?></p><br>
-            <p>Cantidad:<?php echo $resultado["cantidad"]?></p><br>
+            <p>Fecha:<?php echo $resultado["fecha"]?></p>
+            <p>Cantidad:<?php echo $resultado["cantidad"]?></p>
             </div>
             <div>
                 <input name="nombre" type="hidden" id="nombre" value="<?php echo $resultado["tipo"]?>"/>
@@ -130,6 +147,7 @@
         </div>
     </div>
     </form>
+    
     <?php } ?>
 </div>
         

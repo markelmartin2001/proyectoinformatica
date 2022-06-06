@@ -23,16 +23,9 @@
 <head>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
     <link rel="stylesheet" href="styles.css">
-    <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica:ital@1&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica:ital@1&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@665&family=IM+Fell+DW+Pica:ital@1&family=Righteous&family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
 <style>
+
+
     #prods{
         position: absolute;
         top:30%;
@@ -71,11 +64,6 @@
         border-radius:10px;
 
     }
-
-    .f{
-        
-
-    }
     
     .n{
         text-align:center;
@@ -102,7 +90,6 @@
         margin-left: 10%;
         height:2em;
     }
-
 
 .boton_comprar{
   
@@ -133,7 +120,7 @@
 <body>
 
     
-    
+
     <div id="prods" >
         <?php
         foreach($resultados as $resultado){?>
@@ -152,5 +139,9 @@
         </div>
         </form>
         <?php } ?>
-        </div>
+        
+</div>
+
 </body>
+</html>
+<?php include 'footer.php'?>

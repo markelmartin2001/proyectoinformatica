@@ -36,26 +36,27 @@
 </ul>
 </div>
 
+<title>Resumenes de los ultimos partidos</title>
 <div class="contendorgrande">
 <div class="container">
   <div class="card">
     <img src="Pictures/fotopartido1.png">
-    <h4>Jornada 1</h4>
-    <p>Partido contral el MADRID F.C. <br> MADRID F.C 2 JOVELLANOS F.C 4  <br> Victoria del equipo frente al vigente campeón.</p>
+    <h4>partido1</h4>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim, ipsam error.</p>
   <a href="#">Leer mas</a>
   </div>
 
   <div class="card">
-    <img src="Pictures/jornada2.jpg">
-    <h4>Jornada 2</h4>
-    <p>Partido contral el MALAGA F.C. <br> JOVELLANOS F.C 2 MALAGA F.C 2  <br> Empate sufrida frente a un buen equipo.</p>
+    <img src="Pictures/fotopartido1.png">
+    <h4>partido1</h4>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim, ipsam error.</p>
   <a href="#">Leer mas</a>
   </div>
     
   <div class="card">
-    <img src="Pictures/jornada3.jpg">
-    <h4>Jornada 3</h4>
-    <p>Partido contral el GIRONA F.C. <br> CADIZ F.C 4 JOVELLANOS F.C 0  <br> Victoria placida del equipo</p>
+    <img src="Pictures/fotopartido1.png">
+    <h4>partido1</h4>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim, ipsam error.</p>
   <a href="#">Leer mas</a>
   </div>
 
@@ -64,23 +65,23 @@
 
 <div class="container">
   <div class="card">
-    <img src="Pictures/jornada4.jpg">
-    <h4>Jornada 4</h4>
-    <p>Partido contral el GIRONA F.C. <br> JOVELLANOS F.C 2 GIRONA F.C 0  <br> Derrota del equipo en un mal partido.</p>
+    <img src="Pictures/fotopartido1.png">
+    <h4>partido1</h4>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim, ipsam error.</p>
   <a href="#">Leer mas</a>
   </div>
 
   <div class="card">
-    <img src="Pictures/jornada5.jpg">
-    <h4>Jornada 5</h4>
-    <p>Partido contral el GETAFE F.C. <br> GETAFE F.C 2 JOVELLANOS F.C 3  <br> victoria en una remontada épica del equipo.</p>
+    <img src="Pictures/fotopartido1.png">
+    <h4>partido1</h4>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim, ipsam error.</p>
   <a href="#">Leer mas</a>
   </div>
     
   <div class="card">
-    <img src="Pictures/jornada6.jpg">
-    <h4>Jornada 6</h4>
-    <p>Partido contral el CARABANCHEL F.C. <br> JOVELLANOS F.C 2 CARABANCHEL F.C 0  <br> Victoria dura del equipo.</p>
+    <img src="Pictures/fotopartido1.png">
+    <h4>partido1</h4>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim, ipsam error.</p>
   <a href="#">Leer mas</a>
   </div>
 </div>
@@ -102,18 +103,16 @@
         top:25%;
         left:35%;
         font-family: Arial; 
-        font-size: 100%; 
+        font-size: 25px; 
         COLOR: black; 
-        text-shadow: 0px 0px 9px #508AD3;
-  }
+        text-shadow: 0px 0px 9px #508AD3;}
 .slider{ 
     position: relative;
-    top: 20%;
-    left:25%;
-    width:50%;
+    top: 25%;
+    left:20%;
+    width:68%;
     overflow: hidden;
     z-index: 0;
-    margin-top: 100px;
   }
 .slider ul{
     display: flex;
@@ -150,8 +149,6 @@
 
 
 
-
-
 html,body{
   margin:0;
   padding : 0;
@@ -163,6 +160,7 @@ body{
   font-family: sans-serif;
   letter-spacing: 0.03em;
   line-height:1.6;
+
 }
 
 .title{
@@ -180,8 +178,6 @@ body{
   flex-wrap:wrap;
   justify-content:center;
   margin:auto;
-  margin-top:50px;
-  margin-bottom:50px;
 }
 
 .container .card{
@@ -225,5 +221,4 @@ body{
   margin-bottom: 300px;
   position:relative;
 }
-
 </style>

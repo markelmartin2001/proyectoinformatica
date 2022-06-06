@@ -41,6 +41,7 @@
 
 ?>
 <head>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
     <link rel="stylesheet" href="./styles.css">
     <meta name="viewport"
@@ -71,7 +72,7 @@
         min-height:20%;
         background-color: white;
         border: solid black 3px;
-        left:65%;
+        left:55%;
         top: 50%;
         z-index: 3;
     }
@@ -170,14 +171,15 @@
         <img class="escudo" src="Pictures/escudo.png"> <div id="tit"><h2 > Jovellanos C.F</h2></div>
          <?php if(!empty($user)): ?>
             <div id=emcarr>
-                <div class="nav">
+                <div class=" email nav">
                     <ul>
                         <li>
                             <a href=""><?= $user['email']; ?></a>
                             <ul>
-                                <li>hola</li>
+                                <li><a>Pedidos</a></li>
+                                <li><a href="logout.php">Cerrar Sesión</a></li>
                             <?php if($_SESSION['rol']==0): ?>
-                                <li>admin</li>
+                                <li><a href="admin.php">Admin</a></li>
                             <?php endif; ?> 
                             </ul>
                         </li>
@@ -185,8 +187,6 @@
                 </div>
                 <!--Carrito  -->
                 <div class="car"><a  onclick="mostrar('carrito')">Carrito 🛒 <?php echo $totalcantidad?></a></div>
-                <!--Carrito  -->
-                <div class="logout"><a href="logout.php">Logout</a></div>
             </div>
                 <?php else: ?>
              <div id=logreg>    

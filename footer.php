@@ -84,7 +84,8 @@ footer{
     width: 100%;
     background: #202020;
     color: white; 
-    bottom:0;
+    position: relative;
+    top:100%;
     height:300px;
 
 }
@@ -92,7 +93,7 @@ footer{
     width: 100%;
     max-width: 1200px;
     margin:auto;
-    padding: 40px;
+
     
    
 }

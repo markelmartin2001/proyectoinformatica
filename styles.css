@@ -94,32 +94,28 @@
 		}
 
 		#emcarr{
-			width:30%;
-			height:100%;
+			
+			width:40%;
+			min-width:400px;
+			height:60%;
 			position:absolute;
-			left:60%;
+			left:50%;
 		}
 
-		.email{
-			margin-top:8%;
-			width:50%;
-			float:left;
-			font-size:30px;
-		}
+
 
 		.car{
-			width:30%;
+			margin-left:80%;
+			min-width:100px;
+			width:20%;
 			float:left;
 			font-size:20px;
 		}
 
-		.logout a{
-			font-size:20px;
-			width:30%;
-			text-decoration:none;
-			color:white;
-		}
 
+		.car:hover a, #email:hover a{
+			border-bottom:1px solid white;
+		}
 		ul,ol{
 			list-style: none;
 		}
@@ -127,8 +123,20 @@
 		.nav{
 			position:absolute;
 			left:25%;
-			top:20%;
+			top:19%;
 			font-size:20px;
+		}
+
+		.email{
+			top:20%;
+			width:50%;
+			font-size:30px;
+			left:20%;
+		}
+
+		.email ul ul{
+			font-size:20px;
+			z-index: 9;
 		}
 
 		.nav li a{
@@ -136,6 +144,7 @@
 			color:white;
 			padding:10px 10px;
 			display:block;
+			z-index: 9;
 		}
 
 		.nav>li{
@@ -150,6 +159,7 @@
 			display:none;
 			position:absolute;
 			background-color: black;
+			width:60%;
 		}
 
 		.nav li:hover >ul{

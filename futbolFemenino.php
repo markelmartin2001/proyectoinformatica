@@ -37,27 +37,27 @@
 </div>
 </div> 
 
-
+<title>Resumenes de los ultimos partidos</title>
 <div class="contendorgrande">
 <div class="container">
   <div class="card">
-    <img src="Pictures/jordana1f.jpg">
-    <h4>Jornada 1</h4>
-    <p>Partido contral el GIRONA F.C. <br> JOVELLANOS F.C 2 - Girona F.C 0  <br> Victoria placida del equipo.</p>
+    <img src="Pictures/fotopartido1.png">
+    <h4>partido1</h4>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim, ipsam error.</p>
   <a href="#">Leer mas</a>
   </div>
 
   <div class="card">
-    <img src="Pictures/jornada2f.jpg">
-    <h4>Jornada 2</h4>
-    <p>Partido contral el MALLORCA F.C. <br> GETAFE F.C 0 - JOVELLANOS F.C 4  <br> Victoria placida del equipo.</p>
+    <img src="Pictures/fotopartido1.png">
+    <h4>partido1</h4>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim, ipsam error.</p>
   <a href="#">Leer mas</a>
   </div>
     
   <div class="card">
-    <img src="Pictures/jornada3f.jpg">
-    <h4>Jornada 3</h4>
-    <p>Partido contral el BETIS F.C. <br> JOVELLANOS F.C 3 BETIS F.C 2  <br> Victoria sufrida en casa.</p>
+    <img src="Pictures/fotopartido1.png">
+    <h4>partido1</h4>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim, ipsam error.</p>
   <a href="#">Leer mas</a>
   </div>
 
@@ -66,23 +66,23 @@
 
 <div class="container">
   <div class="card">
-    <img src="Pictures/jornada4f.jpg">
-    <h4>Jornada 4</h4>
-    <p>Partido contral el GIRONA F.C. <br>MANRESA F.C 2-JOVELLANOS F.C 2<br> Primer empate del equipo en la temporada.</p>
+    <img src="Pictures/fotopartido1.png">
+    <h4>partido1</h4>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim, ipsam error.</p>
   <a href="#">Leer mas</a>
   </div>
 
   <div class="card">
-    <img src="Pictures/jornada5f.jpg">
-    <h4>Jornada 5</h4>
-    <p>Partido contral el CADIZ F.C. <br> JOVELLANOS F.C 2 - CADIZ F.C 0  <br> Victoria importante del equipo para coger confiaza.</p>
+    <img src="Pictures/fotopartido1.png">
+    <h4>partido1</h4>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim, ipsam error.</p>
   <a href="#">Leer mas</a>
   </div>
     
   <div class="card">
-    <img src="Pictures/jornada6f.webp">
-    <h4>Jornada 6</h4>
-    <p>Partido contral el SEVILLA F.C. <br> JOVELLANOS F.C 1 - Girona F.C 2  <br> Derrota que deja tocado al equipo.</p>
+    <img src="Pictures/fotopartido1.png">
+    <h4>partido1</h4>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim, ipsam error.</p>
   <a href="#">Leer mas</a>
   </div>
 </div>
@@ -95,7 +95,7 @@
 .titulo{  
         z-index: 1;
         position:absolute;
-        top:22%;
+        top:25%;
         left:35%;
         font-family: Arial; 
         font-size: 100%; 
@@ -103,12 +103,11 @@
         text-shadow: 0px 0px 9px #508AD3;}
 .slider{ 
     position: relative;
-    top: 20%;
+    top: 25%;
     left:25%;
     width:50%;
     overflow: hidden;
     z-index: 0;
-    margin-top: 100px;
   }
 .slider ul{
     display: flex;
@@ -155,6 +154,7 @@ body{
   font-family: sans-serif;
   letter-spacing: 0.03em;
   line-height:1.6;
+
 }
 
 .title{
@@ -172,8 +172,6 @@ body{
   flex-wrap:wrap;
   justify-content:center;
   margin:auto;
-  margin-top:50px;
-  margin-bottom:50px;
 }
 
 .container .card{

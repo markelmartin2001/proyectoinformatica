@@ -28,7 +28,7 @@
 
     #prods{
         position: relative;
-        top:30%;
+        top:15%;
         width:60%;
         left:20%;
         display:flex;
@@ -126,12 +126,12 @@
         <form id="formulario" name="formulario" method="post" action="cart.php">
         <div class="prod">
             <div class="n"><h2><?php echo $resultado["nombre"]?><h2></div >
-            <div class="f"><img height="100%" width="100%" src="productos/<?php echo $resultado["foto"]?> "/></div>
+            <div class="f"><img height="100%" width="100%" src="productos/<?php echo $resultado["foto"];?> "/></div>
             <div class="p"><h2 class="h2"><?php echo $resultado["precio"]?> €<h2></div>
             <div>
-                <input name="nombre" type="hidden" id="nombre" value="<?php echo $resultado["nombre"]?>"/>
-                <input name="precio" type="hidden" id="precio" value="<?php echo $resultado["precio"]?>"/>
-                <input name="foto" type="hidden" id="foto" value="<?php echo $resultado["foto"]?>"/>
+                <input name="nombre" type="hidden" id="nombre" value="<?php echo $resultado["nombre"];?>"/>
+                <input name="precio" type="hidden" id="precio" value="<?php echo $resultado["precio"];?>"/>
+                <input name="foto" type="hidden" id="foto" value="<?php echo $resultado["foto"];?>"/>
                 <input name="cantidad" type="hidden" id="cantidad" min="1" value="1"/>
             </div>
             <div class="b"><button class="boton_comprar" type="submit">Comprar</button></div>

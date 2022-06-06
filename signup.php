@@ -4,8 +4,10 @@ include "connectBD.php";
 
 $message = '';
 if (!empty($_POST['nombre']) && !empty($_POST['p_apellido']) && !empty($_POST['s_apellido']) &&!empty($_POST['email']) && !empty($_POST['password'])) {
-    $sql = "INSERT INTO usuario (nombre, p_apellido, s_apellido,email, password, fecha_nacimiento, genero) VALUES (:nombre, :p_apellido, :s_apellido,:email, :password, :fecha_nacimiento, :genero)";
+  if($_POST['cpassword']==$_POST['password']){
+    $sql = "INSERT INTO usuario (nombre, p_apellido, s_apellido,email, password, fecha_nacimiento, genero,rol) VALUES (:nombre, :p_apellido, :s_apellido,:email, :password, :fecha_nacimiento, :genero, :rol)";
     $stmt = $conex->prepare($sql);
+    $stmt->bindParam(':rol', $_POST['rol']);
     $stmt->bindParam(':nombre', $_POST['nombre']);
     $stmt->bindParam(':p_apellido', $_POST['p_apellido']);
     $stmt->bindParam(':s_apellido', $_POST['s_apellido']);
@@ -21,8 +23,10 @@ if (!empty($_POST['nombre']) && !empty($_POST['p_apellido']) && !empty($_POST['s
     } else {
       $message = 'Sorry there must have been an issue creating your account';
     }
+  }else{
+    $message = "Contraseñas no coinciden";
   }
-
+}
 ?>
 
 
@@ -57,8 +61,8 @@ if (!empty($_POST['nombre']) && !empty($_POST['p_apellido']) && !empty($_POST['s
       }
 
       .divlog{
-          top:10%;
-          height:80%;
+          top:5%;
+          height:90%;
       }
 
       .formlog{
@@ -75,32 +79,52 @@ if (!empty($_POST['nombre']) && !empty($_POST['p_apellido']) && !empty($_POST['s
         #genero{
             margin:0px;
         }
+
+        .mss{
+          -webkit-text-stroke: 0.5px black;
+          position: absolute;
+          top:10%;
+          width: 20%;
+          height: 10%;
+          background: red;
+          font-size: 25px;
+          font-weight: bold;
+          border-radius: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+          color:white;
+        }
+
+        body{
+          margin:0;
+        }
         </style>
         <title>Register</title>
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     </head>
     <body>
-    <div class=divlog>
-        <?php if(!empty($message)): ?>
-            <p> <?= $message ?></p>
+    <?php if(!empty($message)): ?>
+            <div class= mss> <?= $message ?></div>
         <?php endif; ?>
-    
+    <div class=divlog>
+
         <div class=mess>
             <h1>REGISTRATE</h1>
     </div>
     <form action ="signup.php" method="post" class= formlog>
         
-        <input type="text" name="nombre" placeholder="NOMBRE" class=inpform>
+        <input type="text" name="nombre" placeholder="NOMBRE" class=inpform required>
         
-        <input type="text" name="p_apellido" class=inpform placeholder="PRIMER APELLIDO">
-        <input type="text" name="s_apellido" class=inpform placeholder="SEGUNDO APELLIDO">
-        
-        <input type="password" name="password" class=inpform  placeholder="CONTRASEÑA">
-        <input type="password" name="cpassword" class=inpform placeholder="CONFIRMAR CONTRASEÑA">
+        <input type="text" name="p_apellido" class=inpform placeholder="PRIMER APELLIDO"required>
+        <input type="text" name="s_apellido" class=inpform placeholder="SEGUNDO APELLIDO"required>
+        <input type="number" name="rol" hidden value="1" required>
+        <input type="password" name="password" class=inpform  placeholder="CONTRASEÑA"required>
+        <input type="password" name="cpassword" class=inpform placeholder="CONFIRMAR CONTRASEÑA"required>
 
-        <input type="text" name="email" class=inpform placeholder="EMAIL">
+        <input type="text" name="email" class=inpform placeholder="EMAIL"required>
         
-        <input type="date" name="fecha_nacimiento" class="inpform" value="2000-07-22" min="1900-01-01" max="2022-12-31">
+        <input type="date" name="fecha_nacimiento" class="inpform" value="2000-07-22" min="1900-01-01" max="2022-12-31"required>
         
         <select id="genero" name="genero" class="sel" required>
             <option value="" hidden>Género</option>

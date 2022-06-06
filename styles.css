@@ -1,224 +1,163 @@
-header{
-	background-color:rgb(20, 1, 1);
-	max-height:5em;
-	position: static;
-	max-width: auto;
-	
-	}
-	
-	img {
-		max-width: 100%;
-		max-height: 100%;
-	}
-	* {
-		padding:0;
-		margin:0;
-	}
-	
-	* {
-		margin:0px;
-		padding:0px;
-	}
-	
-	#escudo{
+
+		body {
+			background-image: url("pictures/fondo.jpg");
+			background-size: cover;
+			background-repeat:repeat;
+			background-position: center center;
+			
+		  }		
+
+		header{
+		position:absolute;
+		top: 0px;
+		left:0px;
+		background-color:rgb(20, 1, 1);
+		height:5em;
+		width:100%
+		}
+
+		.primero{
+			display: flex;
+			color:white;
+		}
+
+		.escudo{
+		display: inline-block;
+		position:absolute;
 		width: 5em;
 		height: 5em;
-	}
-	ul, ol {
-		list-style:none;
-	}
-	
-	header{
-		
-		border-bottom: 1px rgb(4, 4, 112) solid;
-	}
-	.nav > li {
-		float:left;
-	
-	
-	}
-	
-	.nav li a {
-		
-	   
-		text-decoration:none;
-		padding:1em 3em;
-		display:block;
-	}
-	
-	.nav li a:hover {
-		
-		border-bottom: solid;
-	}
-	
-	.nav li ul {
-		display:none;
-		position:absolute;
-		min-width:140px;
-	}
-	
-	.nav li:hover > ul {
-		
-		display:block;
-	}
-	
-	.nav li ul li {
-		position:relative;
-		
-	}
-	
-	
-	nav{
-		padding-left: 20%;
-	}
-	
-	
-	
-	
-	ul, ol {
-		list-style:none;
-	}
-	
-	#usuario {
-		color:white;
-		
-		font-size: 24px;
-		padding-top: 1em;
-		margin-left: 300%;
-	
-	
-	
-	}
-	 #logout > a{
-	
-	height: 1em;
-	width: 3.5em;
-	}
-	#logout{
-		font-size: 24px;
-		margin-left: 41%;
-		padding-top: 0.5em;
-	
-	}
-	#login {
-	padding-top: 1em;
-	}
-	#login , #regis , #logout{
-	
-		color:white;
-		font-family: 'Black Ops One', cursive;
 		}
-	#regis{
-			align-items: center;
-			display: flex;
-			justify-content: center;
-			background-color: rgb(241, 18, 48);
-			
-			border-radius: 10px;
-			max-height: 1.5em;
-			font-size: 2em;
-		}
-		
-		#regis > #escudo5{	
-			height: 2em;
-	
-		}
-		#imglog{
-			height: 3em;
-			padding-top: 1em;
-			padding-left: 25%;
-			
-		} 
-		#login:hover{
-			
-			border-bottom: 5px white solid;
-		}
-		
-	
-		.primero li a {
-			
-		
-			text-decoration:none;
-			padding:15px 25px;
-			display:block;
-		
-		}
-		
-		#logout :hover {
-			border-bottom: 1px white solid;
-			
-		}
-		
-		.primero li ul {
-			display:none;
+
+		#tit{
+			display: inline-block;
 			position:absolute;
-			min-width:140px;
-		}
-		
-		.primero li:hover > ul {
-			display:block;
-		}
-		
-		.primero li ul li {
-			position:relative;
-		}
-		.primero > #escudo{
-		
-			max-width: 5em;
-		}
-		.primero{
-			padding-left: 20.5%;
-			display: flex;
-			
-		}
-		
-		#letra{
-			font-size: 2em;
-			font-family: 'IM Fell DW Pica', serif;
+			left:8%;
+			width:20%;
 			color:white;
-			display: flex;
-			padding-top: 2%;
+
 		}
-		.derech > li {
+
+		#logreg{
+			width:30%;
+			height:100%;
+			position:absolute;
+			left:60%;
+		}
+
+		.login{
+			width:50%;
 			float:left;
 		}
-		
-		.derech li a {
-			
-		
+
+		.login>a{
+			position:relative;
+			display: inline-block;
 			text-decoration:none;
-			padding:10px 12px;
+			color:white;
+			font-family: 'Black Ops One', cursive;
+			font-size:100%;
+		}
+
+		.login>img{
+			position:absolute;
+			display: inline-block;
+			width: 5em;
+		height: 5em;
+			right:100%;
+		}
+
+		.sing{
+			background-color: red;
+			height:100%;
+			width:50%;
+
+		}
+
+		.sing>a{
+			position:relative;
+			top:20%;
+			display: inline-block;
+			text-decoration:none;
+			color:white;
+			font-family: 'Black Ops One', cursive;
+			font-size:30px;
+			height:100%;
+		}
+
+		.sing>img{
+			position:absolute;
+			display: inline-block;
+			left:50%;
+		}
+
+		#emcarr{
+			width:30%;
+			height:100%;
+			position:absolute;
+			left:60%;
+		}
+
+		.email{
+			margin-top:8%;
+			width:50%;
+			float:left;
+			font-size:30px;
+		}
+
+		.car{
+			width:30%;
+			float:left;
+			font-size:20px;
+		}
+
+		.logout a{
+			font-size:20px;
+			width:30%;
+			text-decoration:none;
+			color:white;
+		}
+
+		ul,ol{
+			list-style: none;
+		}
+
+		.nav{
+			position:absolute;
+			left:25%;
+			top:20%;
+			font-size:20px;
+		}
+
+		.nav li a{
+			text-decoration: none;
+			color:white;
+			padding:10px 10px;
 			display:block;
 		}
-		
-		.derech li a:hover {
-			border-bottom: solid;
+
+		.nav>li{
+			float:left;
 		}
-		
-		.derech li ul {
+
+		.nav li a:hover{
+			border-bottom:1px solid white;
+		}
+
+		.nav li ul{
 			display:none;
 			position:absolute;
-			min-width:140px;
+			background-color: black;
 		}
-		
-		.derech li:hover > ul {
+
+		.nav li:hover >ul{
 			display:block;
 		}
-		
-		.derech li ul li {
-			position:relative;
-		}
-		
-	
-		.derech{
-			padding-left: 63.5%;
-		}
-		
+
 		/* a par tir de aqui el css es de las noticias*/
 		#foto1{
 		
 			padding-left:8.5%;
-			max-width:100em;
+			max-width:100%;
 			height:100%;
 			position:relative; z-index:-1;
 			
@@ -278,13 +217,7 @@ header{
 		
 		
 		
-		body {
-			height:100%;
-			background-image: url("pictures/fondo.jpg");
-			background-size: cover;
-			background-repeat:no-repeat;
-			background-position: center center;
-		  }
+
 		
 		
 		
@@ -478,3 +411,130 @@ header{
 			text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), 
 				 -1px 0px 2px rgba(255, 255, 255, 0);
 		}
+
+/* Compra */
+
+#compra{
+	border:1px;
+	width: 99%;
+	height:80%;
+	position:absolute;
+	top:15%;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	overflow:hidden;
+	
+}
+
+#compra > div{
+	border: solid 3px black;
+	height: 95%;
+	width:80%;
+}
+
+#total{
+	border-top:1px solid black;
+	font-size:30px;
+	text-align:center;
+}
+
+#product{
+	display:flex;
+	justify-content: center;
+	
+	height:85%;
+	overflow: auto;
+}
+
+.liprod{
+	
+	height:3em;
+	font-size: 25px;
+	border-radius:20px;
+	border: 2px solid black;
+	background-color:rgba(255, 255, 255, 0.781);
+	margin-top:5px;
+	
+}
+
+
+
+.prod{
+text-align: left;
+color: #000000;
+display: inline-block;
+margin-left:5%;
+width:25%;
+margin:1%;
+
+}
+
+.editar {
+background-color: blue;
+border-radius: 8px;
+box-sizing: border-box;
+color: #FFFFFF;
+cursor: pointer;
+font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size: 14px;
+font-weight: 500;
+height: 40px;
+padding: 10px 16px;
+text-align: center;
+text-decoration: none;
+}
+#cantidad{
+width:20%;
+height:40%;
+}
+
+#caja_product{
+background: rgb(34,63,195);
+background: linear-gradient(0deg, rgba(34,63,195,1) 0%, rgba(253,45,47,1) 40%);
+box-shadow: 3px 5px 10px black;
+}
+
+.divprod{
+    display: flex;
+    height: 100%;
+    border-radius: 20px;
+    box-shadow: 3px 5px 10px black;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.finalizar{
+	background-color: white;
+	color:black;
+	border-radius: 8px;
+	box-sizing: border-box;
+	cursor: pointer;
+	font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 22px;
+	font-weight: bold;
+	height:50%;
+	padding: 10px 16px;
+	text-align: center;
+	text-decoration: none;
+}
+
+.finalizar:hover{
+background-color:lightgrey;
+}
+.fin{	
+text-align:center;
+height:40%;
+}
+.fin>h1{
+display:inline-block;
+margin:0;
+}
+.fin2{	
+	text-align:center;
+	margin-top:5px;
+	height:60%;
+	}
+.total{
+height:15%;
+}

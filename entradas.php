@@ -99,6 +99,7 @@
 }
 
 .precio:hover {
+    
   box-shadow: rgba(253, 76, 0, 0.5) 0 3px 8px;
 }
 </style>

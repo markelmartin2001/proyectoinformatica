@@ -44,17 +44,18 @@ padding:10%;
 
 <div class="contenedores">
     <div class="contenedor" >
-        <a href=""><div id="foto1"><img src="Pictures/inicio1.jpg">
-    <p id="titulofoto">Remontada sufrida contra el colista </p> <br> <p id="marcador"><img id="escudo3" src="Pictures/Aguilas.png">1-2<img id="escudo2" src="Pictures/escudob.png"> </p>
-    </div>
-    </div></a>
-    <div class="fixed-leftSd">
+        <div id="foto1"><img src="Pictures/inicio1.jpg">
+      <p id="titulofoto">Remontada sufrida contra el colista </p> <br> <p id="marcador"><img id="escudo3" src="Pictures/Aguilas.png">1-2<img id="escudo2" src="Pictures/escudob.png"> </p>
+      </div>
+</div>
 
- <div id="video"><video width="390" height="240" autoplay loop muted>
-        <source src="pictures/anuncio.mp4" type="video/mp4">
-       
-</video>
-<div class="slide">
+<div class="fixed-leftSd">
+
+    <div id="video">
+      <video width="390" height="240" autoplay loop muted>
+      <source src="pictures/anuncio.mp4" type="video/mp4">
+      </video>
+      <div class="slide">
 			<div class="slide-inner">
 				<input class="slide-open" type="radio" id="slide-1" 
 			 	     name="slide" aria-hidden="true" hidden="" checked="checked">
@@ -70,19 +71,19 @@ padding:10%;
 			 	     name="slide" aria-hidden="true" hidden="">
 				<div class="slide-item">
 					<img src="pictures/partido3.png">
-				</div>
+        </div>
 				<label for="slide-3" class="slide-control prev control-1">‹</label>
 				<label for="slide-2" class="slide-control next control-1">›</label>
 				<label for="slide-1" class="slide-control prev control-2">‹</label>
 				<label for="slide-3" class="slide-control next control-2">›</label>
 				<label for="slide-2" class="slide-control prev control-3">‹</label>
 				<label for="slide-1" class="slide-control next control-3">›</label>
-			</div>
-</div>
-<div id="video2"><video width="390" height="240" autoplay loop muted>
+		  </div>
+    </div>
+<div id="video2">
+  <video width="390" height="240" autoplay loop muted>
         <source src="pictures/adidas.mp4" type="video/mp4">
-       
-</video>
+  </video>
 
 </div>
 

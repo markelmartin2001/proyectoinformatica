@@ -33,25 +33,99 @@
 <link href="https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica:ital@1&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@665&family=IM+Fell+DW+Pica:ital@1&family=Righteous&family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
 <style>
-    #prod{
+    #prods{
         position: absolute;
         top:30%;
-        width:90%
+        width:60%;
         
-    }
-    th{
-        border-top:1px solid black;
-        border-bottom:1px solid black;
-    }
-    td{
-        border-top:3px solid black;
-        width:25%;
-        height: 150px;
+        position: absolute;
+        left:20%;
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
     }
 
     .comprar{
         border:none;
     }
+
+
+    #formulario{
+        width:100%;
+    }
+    .prod{
+        margin:0;
+        width:100%;
+        display:flex;
+        flex-wrap: wrap;
+        box-shadow: 3px 10px 20px black;
+    }
+
+    #formulario{
+        width:45%;
+        height:50%;
+        background-color:white;
+        margin-bottom:10%;
+        border:3px solid black;
+        border-radius:10px;
+
+    }
+
+    .f{
+        
+
+    }
+    
+    .n{
+        text-align:center;
+        width:100%;
+        background-color:black;
+        color: white;
+    }
+
+    .p{
+        background-color:black;
+        color: white;
+        border-top-right-radius:10px;
+        width: 40%;
+        height: 20%;
+        text-align:center;
+        font-size: 100%;
+    }
+
+    .h2{
+        padding-top:2%;
+    }
+    .b{
+        width: 40%;
+        margin-left: 10%;
+        height:2em;
+    }
+
+
+.boton_comprar{
+  
+  height:100%;
+  width:100%;
+  font-size: 100%;
+  font-family: 'Bebas Neue', sans-serif;
+  background: linear-gradient(45deg, transparent 5%, #FF013C 5%);
+  border: 0;
+  color: #fff;
+  letter-spacing: 3px;
+  box-shadow: 6px 0px 0px #00E6F6;
+  outline: transparent;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+.boton_comprar:hover{
+    background: linear-gradient(45deg, transparent 5%, #8b0625 5%);
+    box-shadow: 6px 0px 0px #0f868f;
+    color:gray;
+}
 
 </style>
 </head>
@@ -60,30 +134,23 @@
 
     
     
-    <table id="prod" >
-        <tr>
-        <th>Nombre</th>
-        <th>Precio</th>
-        <th>Cantidad</th>
-        <th>Foto</th>
-        <th class= "comprar"></th>
-        </tr>
+    <div id="prods" >
         <?php
         foreach($resultados as $resultado){?>
         <form id="formulario" name="formulario" method="post" action="cart.php">
-        <tr>
-            <td><?php echo $resultado["nombre"]?></td>
-            <td><?php echo $resultado["precio"]?> €</td>
-            <td><input name="cantidad" type="number" id="cantidad" min="1" value="1"/></td>
-            <td><img src="productos/<?php echo $resultado["foto"]?> "/></td>
+        <div class="prod">
+            <div class="n"><h2><?php echo $resultado["nombre"]?><h2></div >
+            <div class="f"><img height="100%" width="100%" src="productos/<?php echo $resultado["foto"]?> "/></div>
+            <div class="p"><h2 class="h2"><?php echo $resultado["precio"]?> €<h2></div>
             <div>
                 <input name="nombre" type="hidden" id="nombre" value="<?php echo $resultado["nombre"]?>"/>
                 <input name="precio" type="hidden" id="precio" value="<?php echo $resultado["precio"]?>"/>
                 <input name="foto" type="hidden" id="foto" value="<?php echo $resultado["foto"]?>"/>
+                <input name="cantidad" type="hidden" id="cantidad" min="1" value="1"/>
             </div>
-            <td class= "comprar"><button type="submit">Comprar</button></td>
-        </tr>
+            <div class="b"><button class="boton_comprar" type="submit">Comprar</button></div>
+        </div>
         </form>
         <?php } ?>
-    </table>
+        </div>
 </body>

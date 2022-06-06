@@ -67,13 +67,12 @@
 <style>
     #carrito{
         position: absolute;
-        width:30%;
+        width:25%;
         min-height:20%;
         background-color: white;
         border: solid black 3px;
-        display: none;
-        left:35%;
-        top: 10%;
+        left:65%;
+        top: 50%;
         z-index: 3;
     }
 
@@ -113,7 +112,7 @@
     .conjunto{
         border: 1px solid black;
         margin-top:5px;
-        width:70%;
+        width:80%;
     }
 
     .cartlist{
@@ -152,6 +151,10 @@
         text-align: center;
         text-decoration: none;
     }
+
+    #carrito ul{
+        padding:0;
+    }
 </style>
 <!--Carrito  -->
 </head>
@@ -159,72 +162,50 @@
 <header>
 
         
-        <div style="max-width:5em; display: inline-block; position:absolute" ><img src="Pictures/publi.png" /></div>
         
-        <ul class="primero">
-       
-        <img id="escudo" src="Pictures/escudo.png"> <p id="letra"> Jovellanos C.F</p>
+        
+    <div class="primero">
+        <div  ><img class="publi" src="Pictures/publi.png" /></div>
+        <img class="escudo" src="Pictures/escudo.png"> <div id="tit"><h2 > Jovellanos C.F</h2></div>
          <?php if(!empty($user)): ?>
-                <li><div id = usuario><?= $user['email']; ?></div></li>
+            <div id=emcarr>
+                <div class="email"><?= $user['email']; ?></div>
                 <!--Carrito  -->
-                <li id= carro><a  onclick="mostrar()">Carrito 🛒 <?php echo $totalcantidad?></a></li>
+                <div class="car"><a  onclick="mostrar()">Carrito 🛒 <?php echo $totalcantidad?></a></div>
                 <!--Carrito  -->
-                <li id = logout><a href="logout.php" id="logout">Logout</a></li>
-            <?php else: ?>
-                 <img id="imglog" src="Pictures/login.png"><li><a href="login.php" id="login"><h1>Login<h1></a></li>
-                <li><a href="signup.php" id="regis"> <img id="escudo5" src="Pictures/escudob.png">Regístrate</a></li>
-                
+                <div class="logout"><a href="logout.php">Logout</a></div>
+            </div>
+                <?php else: ?>
+             <div id=logreg>    
+                <div class="login"><img src="Pictures/login.png"><a href="login.php" ><h1>Login<h1></a></div>
+                <button class=sing><img class="escudo" src="Pictures/escudob.png"><a href="signup.php" id="regis"> Regístrate</a></button>
+            </div>   
             <?php endif; ?>    
-        </ul>
     
     <nav>
         
 
         <ul class="nav">
             <li><a href="index.php">Inicio</a></li>
-            
-            <li><a href="futbolMasculino.php">Fútbol Masculino</a>
-                <ul>
-                    <li><a href="">Primer Equipo</a></li>
-                    <li><a href="">Cantera</a></li>
-                    <li><a href="">Escuela</a></li>
-
-            </li>
-        </ul>
-        </li>
-        <li><a href="futbolFemenino.php">Fútbol Femenino</a>
+            <li><a href="estadio.php">Estadio</a></li>
+            <li><a href="">Equipos</a>
             <ul>
-                <li><a href="">Primer Equipo</a></li>
-                <li><a href="">Cantera</a></li>
-                <li><a href="">Escuela</a></li>
-
-            </ul>
-        </li>
-
-
-
-        <li><a href="estadio.php">Estadio</a>
-
-        </li>
+            
+            <li><a href="futbolMasculino.php">Fútbol Masculino</a></li>
+            <li><a href="futbolFemenino.php">Fútbol Femenino</a></li>
         </ul>
-        <ul class="derech">
+        
+            
             <li><a href="tienda.php">Tienda</a>
-                <ul>
-                    <li><a href="">Ropa hombre</a></li>
-                    <li><a href="">Ropa mujer</a></li>
-                </ul>
             </li>
             <li><a href="entradas.php">Entradas</a></li>
-            <li><a href="">Tour</a></li>
-            
-            
+            <!-- <li><a href="">Tour</a></li> -->
         </ul>
-
-
+                
     </nav>
 
     <!--Carrito  -->
-    <div id="carrito">
+    <div id="carrito" style="display: none;">
         <div class="centro">
             <h2>Carrito</h2>  
         </div>

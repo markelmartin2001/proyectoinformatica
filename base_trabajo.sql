@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 07-06-2022 a las 15:32:59
+-- Tiempo de generación: 07-06-2022 a las 18:16:38
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 8.0.10
 
@@ -22,20 +22,6 @@ SET time_zone = "+00:00";
 --
 CREATE DATABASE IF NOT EXISTS base_trabajo;
 USE base_trabajo; 
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `detalle_pedido`
---
-
-CREATE TABLE `detalle_pedido` (
-  `id` int(11) NOT NULL,
-  `ped_id` int(11) NOT NULL,
-  `prod_id` int(11) NOT NULL,
-  `precio` decimal(10,2) NOT NULL,
-  `cantidad` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
 -- --------------------------------------------------------
 
 --
@@ -89,7 +75,8 @@ INSERT INTO `pedido_cliente_cp` (`id`, `ref`, `nombre`, `apellidos`, `localidad`
 (6, 'NfTP', 'antonio', 'perez oliva', 'murcia', '654323112', '2022-06-07 12:56:14'),
 (13, 'P8Ob', 'Isable', 'MuÃ±oz', 'Alcorcon', '1233142123', '2022-06-07 13:07:29'),
 (14, 'ElSCe', 'Isable', 'MuÃ±oz', 'Alcorcon', '1233142123', '2022-06-07 13:07:56'),
-(15, 'mY0RG', 'Isable', 'MuÃ±oz', 'Alcorcon', '1233142123', '2022-06-07 13:08:33');
+(15, 'mY0RG', 'Isable', 'MuÃ±oz', 'Alcorcon', '1233142123', '2022-06-07 13:08:33'),
+(16, 'VWKak', 'Alfonso', 'Perez', 'Albacete', '797927123', '2022-06-07 16:15:30');
 
 -- --------------------------------------------------------
 
@@ -118,7 +105,8 @@ INSERT INTO `pedido_cp` (`id`, `ref`, `cliente`, `estado`, `medio`, `total`, `fe
 (6, 'hfBl', 'NfTP', 'Pagado', 'Tarjeta bancaria', '30', '2022-06-07 12:56:14'),
 (13, 'W6fMy', 'P8Ob', 'Falta de pago', 'Tarjeta bancaria', '35', '2022-06-07 13:07:29'),
 (14, 'SUSeK', 'ElSCe', 'Falta de pago', 'Tarjeta bancaria', '35', '2022-06-07 13:07:56'),
-(15, '3IMF', 'mY0RG', 'Falta de pago', 'Tarjeta bancaria', '35', '2022-06-07 13:08:33');
+(15, '3IMF', 'mY0RG', 'Falta de pago', 'Tarjeta bancaria', '35', '2022-06-07 13:08:33'),
+(16, 'SGrBA', 'VWKak', 'Falta de pago', 'Tarjeta bancaria', '170', '2022-06-07 16:15:30');
 
 -- --------------------------------------------------------
 
@@ -160,7 +148,11 @@ INSERT INTO `pedido_datos_cp` (`id`, `ref`, `cantidad`, `articulo`, `precio`, `t
 (17, 'iQm05', '1', 'Camiseta Mujer', '35.00', '35', '2022-06-07 13:07:13'),
 (18, 'W6fMy', '1', 'Camiseta Mujer', '35.00', '35', '2022-06-07 13:07:29'),
 (19, 'SUSeK', '1', 'Camiseta Mujer', '35.00', '35', '2022-06-07 13:07:56'),
-(20, '3IMF', '1', 'Camiseta Mujer', '35.00', '35', '2022-06-07 13:08:33');
+(20, '3IMF', '1', 'Camiseta Mujer', '35.00', '35', '2022-06-07 13:08:33'),
+(21, 'SGrBA', '1', 'Fondo Sur', '40.00', '40', '2022-06-07 16:15:30'),
+(22, 'SGrBA', '1', 'Fondo Norte', '40.00', '40', '2022-06-07 16:15:30'),
+(23, 'SGrBA', '1', 'Camiseta Hombre', '30.00', '30', '2022-06-07 16:15:30'),
+(24, 'SGrBA', '1', 'Chandal Equipo', '60.00', '60', '2022-06-07 16:15:30');
 
 -- --------------------------------------------------------
 
@@ -181,9 +173,12 @@ CREATE TABLE `productos` (
 --
 
 INSERT INTO `productos` (`idp`, `nombre`, `foto`, `precio`, `cantidad`) VALUES
-(1, 'Camiseta Hombre', 'cam1.jpg', '30.00', 100),
+(1, 'Camiseta Hombre', 'cam1.jpg', '30.00', 99),
 (2, 'Camiseta Mujer', 'cam2.jpg', '35.00', 50),
-(3, 'Chandal Equipo', 'chandal.jpg', '60.00', 50);
+(3, 'Chandal Equipo', 'chandal.jpg', '60.00', 49),
+(5, 'Polo', 'polo.png', '50.00', 30),
+(6, 'Sudadera', 'sudadera.webp', '30.00', 50),
+(7, 'Segunda EquipaciÃ³n', 'Segunda equipacion.webp', '40.00', 50);
 
 -- --------------------------------------------------------
 
@@ -213,17 +208,14 @@ INSERT INTO `usuario` (`id`, `email`, `nombre`, `p_apellido`, `s_apellido`, `pas
 (4, 'antonio@gmail.com', 'antonio', 'Lopez', 'as', '$2y$10$YWwTdUn0SwcDXeXzi9a.KuXgdAfy74uCqySqcUUUIQ2DS0rv.gMsG', '2013-10-30', 'Hombre', 1),
 (5, 'rafa@fgmail.com', 'Rafael', 'pru', 'eba', '$2y$10$G1Zjdivb.xmU6CCoIB8Is.6jnzPcF94HhTkny.m5VO9yafAR4qFLK', '2008-05-15', 'Hombre', 1),
 (6, 'pablo@gmail.com', 'pablo', 'pa', 'blo', '$2y$10$Iwy2AWsARXy/O7//.pd2.OWdhuHBeQf1O8xr83gUVWTDODwOG.Wlq', '2001-08-31', 'Hombre', 0),
-(7, 'admin@gmial.com', 'admin', 'admin', 'admin', '$2y$10$53I7m3cTg.3l0.kJ965aCeG1mPj.W89lbOTdLkcPhFMVEJB.Kzr0C', '1993-10-13', 'Hombre', 0);
+(7, 'admin@gmial.com', 'admin', 'admin', 'admin', '$2y$10$53I7m3cTg.3l0.kJ965aCeG1mPj.W89lbOTdLkcPhFMVEJB.Kzr0C', '1993-10-13', 'Hombre', 0),
+(8, 'manolo@gmail.com', 'Manolo', 'Sanchez', 'Lopez', '$2y$10$6oPffPtMsiPd1wn4SlCSYuo./81A3V4j4dg9J1iqSNsnvKrvR8VhO', '2001-06-16', 'Hombre', 1),
+(9, 'anne@gmail.com', 'Anne', 'Martin ', 'Benito', '$2y$10$MboLOuQLTlj8CB2lw809c.kIDi7qmoqq3yGmWWi9lqICt7qmmejCO', '2003-06-09', 'Mujer', 1),
+(10, 'marco@gmail.com', 'Marco', 'MartÃ­n', 'Gomez', '$2y$10$F7ATVRELXrNzSwpo5iCubupUcLlyI5mRfQjqOoCT35ibr1eaGf1XO', '2007-06-07', 'Otro', 1);
 
 --
 -- Índices para tablas volcadas
 --
-
---
--- Indices de la tabla `detalle_pedido`
---
-ALTER TABLE `detalle_pedido`
-  ADD PRIMARY KEY (`id`);
 
 --
 -- Indices de la tabla `entradas`
@@ -266,40 +258,34 @@ ALTER TABLE `usuario`
 --
 
 --
--- AUTO_INCREMENT de la tabla `detalle_pedido`
---
-ALTER TABLE `detalle_pedido`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT de la tabla `pedido_cliente_cp`
 --
 ALTER TABLE `pedido_cliente_cp`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT de la tabla `pedido_cp`
 --
 ALTER TABLE `pedido_cp`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT de la tabla `pedido_datos_cp`
 --
 ALTER TABLE `pedido_datos_cp`
-  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `idp` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `idp` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

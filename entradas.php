@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="styles.css">
 <style>
 .grande{
-    position :absolute;
+    position :relative;
 	display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -34,6 +34,7 @@
     height: auto;
     top: 20%;
     margin-left: 25%;
+    margin-bottom: 300px;
 }
 
 .segundo{
@@ -152,4 +153,5 @@
     <?php } ?>
 </div>
         
+<div><?php require 'footer.php'?><div>
 </body>

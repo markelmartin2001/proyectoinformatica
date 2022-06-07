@@ -36,7 +36,7 @@ if(isset($_POST['update2'])){
     if(isset($imagen) && $imagen !=""){
         $tipo = $_FILES['ifoto']['type'];
         $temp = $_FILES['ifoto']['tmp_name'];
-        if(!((strpos($tipo,'jpeg')|| strpos($tipo,'png')|| strpos($tipo,'jpg')))){
+        if(!((strpos($tipo,'jpeg')|| strpos($tipo,'png')|| strpos($tipo,'jpg') || strpos($tipo,'webp')))){
             
         }else{
             move_uploaded_file($temp, 'productos/'.$imagen);

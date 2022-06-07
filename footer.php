@@ -9,8 +9,8 @@
 <div class="container-footer-all">
     <div class="container-body">
      <div class="colum1">
-         <h1>mas informacion del equipo</h1>
-         <p> este equipo esta en </p>
+         <h1>Mas informacion del equipo</h1>
+         <p>Este equipo esta en primera division, es un recien ascendido y busca consolidarse este año en la primera division. <br>Los nuevos fichajes ilusionan a la afición y se ven optimistas con este comienzo de temporada. </p>
      </div>
 
      <div class="colum2">
@@ -129,8 +129,8 @@ footer{
 }
 
 .row img{
-    width: 36px;
-    height: 36px;
+    width: 14%;
+    height: 14%;
 }
 
 .row label{

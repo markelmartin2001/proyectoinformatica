@@ -32,13 +32,10 @@ require 'connectBD.php';
             $cantidad = $_POST['cantidad'];
             $precio = $_POST['precio'];
             $foto = $_FILES['ifoto']['name'];
-            echo "aqui";
                 $tipo = $_FILES['ifoto']['type'];
                 $temp = $_FILES['ifoto']['tmp_name'];
-                if(!((strpos($tipo,'jpeg')|| strpos($tipo,'png')|| strpos($tipo,'jpg')))){
-                    echo "aqui2";
+                if(!((strpos($tipo,'jpeg')|| strpos($tipo,'png')|| strpos($tipo,'jpg')|| strpos($tipo,'webp')))){
                 }else{
-                    echo "aqui3";
                     $query = "INSERT INTO productos (nombre, cantidad, precio,foto) VALUES ('$nombre', '$cantidad', '$precio','$foto')";
                     $consulta = $conex->prepare($query);
                     $consulta->execute();

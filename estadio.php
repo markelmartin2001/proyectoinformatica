@@ -19,8 +19,8 @@
 
 <body>
     <?php require 'header.php'?>
-       
-      
+
+    <div class="contendor">
     <div class="ubicacion">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3036.0042564824057!2d-3.6905223842930512!3d40.4530427613534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4228e23705d39f%3A0xa8fff6d26e2b1988!2sEstadio%20Santiago%20Bernab%C3%A9u!5e0!3m2!1ses!2ses!4v1650982096763!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
@@ -28,4 +28,15 @@
     <div class="fotoEstadio">
         <img src="Pictures/imagenEstadio.jpg" />
     </div>
+    </div>
+   
+
+    <div><?php require 'footer.php'?><div>
   </body>
+<style>
+    .contendor{
+        margin-bottom: 300px;
+        height: 60vh;
+        position: relative;
+    }
+</style>

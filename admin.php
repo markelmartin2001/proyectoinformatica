@@ -146,8 +146,8 @@
                         <th>#</th>
                         <th>Referencia</th>
                         <th>Nombre</th>
-                        <th>total</th>
-                        <th>Esatdo</th>
+                        <th>Total</th>
+                        <th>Estado</th>
                     </tr>
                 </thead>
                 <tbody class="table-light"><?php

@@ -46,6 +46,8 @@ body{
   height: 250px;
   position: relative;
   overflow: hidden;
+  background: black;
+  border-radius: 8px;
 }
 .card .cover img{
   width: 250px;

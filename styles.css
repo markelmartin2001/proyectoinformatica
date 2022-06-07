@@ -93,24 +93,11 @@
 			left:50%;
 		}
 
-		#emcarr{
-			
-			width:40%;
-			min-width:400px;
-			height:60%;
-			position:absolute;
-			left:50%;
-		}
 
 
 
-		.car{
-			margin-left:80%;
-			min-width:100px;
-			width:20%;
-			float:left;
-			font-size:20px;
-		}
+
+
 
 
 		.car:hover a, #email:hover a{

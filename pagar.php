@@ -9,6 +9,8 @@ session_start();
     require 'connectBD.php';
 
 
+    
+
 
 //insertamos los datos del cliente
 //creamos referencia de cliente
@@ -50,11 +52,29 @@ if(isset($_SESSION['carrito'])){
             for($i=0;$i<=count($carrito_mio)-1;$i ++){
                 if(isset($carrito_mio[$i])){
                 if($carrito_mio[$i]!=NULL){
-        
+
+                   
+
+
                     $cantidad = $carrito_mio[$i]['cantidad'];
                     $articulo = $carrito_mio[$i]['nombre'];
                     $precio = $carrito_mio[$i]['precio'];
                     $total_precio = $precio * $cantidad;
+                    $query = "SELECT cantidad FROM productos WHERE nombre='$articulo'";
+                        $consulta = $conex->prepare($query);
+                        $consulta->execute();
+                        $disponible=$consulta->fetchAll(PDO::FETCH_ASSOC);
+                        if($consulta->rowCount()==1){
+                            foreach($disponible as $result){
+
+                                $resta= $result["cantidad"]-$cantidad;
+                                $query2 = "UPDATE productos SET cantidad='$resta' WHERE nombre='$articulo'";
+                                $consulta = $conex->prepare($query2);
+                                $consulta->execute();
+                            }
+                        }
+                    
+
                     $sql = "INSERT INTO pedido_datos_cp (ref,cantidad,articulo,precio,total)
                     VALUES ('$ref', '$cantidad', '$articulo', '$precio', '$total_precio')";
                     $stmt= $conex->prepare($sql);

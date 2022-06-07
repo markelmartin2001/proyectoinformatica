@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 06-06-2022 a las 17:45:02
+-- Tiempo de generación: 07-06-2022 a las 15:32:59
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 8.0.10
 
@@ -20,7 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `base_trabajo`
 --
-
+CREATE DATABASE IF NOT EXISTS base_trabajo;
+USE base_trabajo; 
 -- --------------------------------------------------------
 
 --
@@ -82,7 +83,13 @@ CREATE TABLE `pedido_cliente_cp` (
 INSERT INTO `pedido_cliente_cp` (`id`, `ref`, `nombre`, `apellidos`, `localidad`, `telefono`, `fecha`) VALUES
 (1, 'EcQOK', 'Daniel', 'Ortega', 'madird', '1211121212', '2022-06-05 22:39:39'),
 (2, 'gsm9O', 'Daniel', 'Ortega', 'madird', '1211121212', '2022-06-05 22:47:36'),
-(3, 'axpB6', 'Rafael', 'Perez', 'madird', '90342683', '2022-06-05 22:51:02');
+(3, 'axpB6', 'Rafael', 'Perez', 'madird', '90342683', '2022-06-05 22:51:02'),
+(4, 'dThl8', '', '', '', '', '2022-06-06 22:07:46'),
+(5, 'ATYyb', '', '', '', '', '2022-06-07 11:13:50'),
+(6, 'NfTP', 'antonio', 'perez oliva', 'murcia', '654323112', '2022-06-07 12:56:14'),
+(13, 'P8Ob', 'Isable', 'MuÃ±oz', 'Alcorcon', '1233142123', '2022-06-07 13:07:29'),
+(14, 'ElSCe', 'Isable', 'MuÃ±oz', 'Alcorcon', '1233142123', '2022-06-07 13:07:56'),
+(15, 'mY0RG', 'Isable', 'MuÃ±oz', 'Alcorcon', '1233142123', '2022-06-07 13:08:33');
 
 -- --------------------------------------------------------
 
@@ -105,9 +112,13 @@ CREATE TABLE `pedido_cp` (
 --
 
 INSERT INTO `pedido_cp` (`id`, `ref`, `cliente`, `estado`, `medio`, `total`, `fecha`) VALUES
-(0, 'wmZVM', 'EcQOK', 'Falta de pago', 'Tarjeta bancaria', '290', '2022-06-05 22:39:39'),
-(0, 'H7q8', 'gsm9O', 'Falta de pago', 'Tarjeta bancaria', '120', '2022-06-05 22:47:36'),
-(0, '0i4Dh', 'axpB6', 'Falta de pago', 'Tarjeta bancaria', '105', '2022-06-05 22:51:02');
+(1, 'wmZVM', 'EcQOK', 'Pagado', 'Tarjeta bancaria', '290', '2022-06-05 22:39:39'),
+(2, 'H7q8', 'gsm9O', 'Pagado', 'Tarjeta bancaria', '120', '2022-06-05 22:47:36'),
+(3, '0i4Dh', 'axpB6', 'Falta de pago', 'Tarjeta bancaria', '105', '2022-06-05 22:51:02'),
+(6, 'hfBl', 'NfTP', 'Pagado', 'Tarjeta bancaria', '30', '2022-06-07 12:56:14'),
+(13, 'W6fMy', 'P8Ob', 'Falta de pago', 'Tarjeta bancaria', '35', '2022-06-07 13:07:29'),
+(14, 'SUSeK', 'ElSCe', 'Falta de pago', 'Tarjeta bancaria', '35', '2022-06-07 13:07:56'),
+(15, '3IMF', 'mY0RG', 'Falta de pago', 'Tarjeta bancaria', '35', '2022-06-07 13:08:33');
 
 -- --------------------------------------------------------
 
@@ -137,7 +148,19 @@ INSERT INTO `pedido_datos_cp` (`id`, `ref`, `cantidad`, `articulo`, `precio`, `t
 (5, 'wmZVM', '1', 'Camiseta Hombre', '30.00', '30', '2022-06-05 22:39:39'),
 (6, 'H7q8', '1', 'Chandal Equipo', '60.00', '60', '2022-06-05 22:47:36'),
 (7, 'H7q8', '2', 'Camiseta Hombre', '30.00', '60', '2022-06-05 22:47:36'),
-(8, '0i4Dh', '3', 'Camiseta Mujer', '35.00', '105', '2022-06-05 22:51:02');
+(8, '0i4Dh', '3', 'Camiseta Mujer', '35.00', '105', '2022-06-05 22:51:02'),
+(9, 'q7qKo', '1', 'Camiseta Hombre', '30.00', '30', '2022-06-06 22:07:46'),
+(10, 'q7qKo', '1', 'Fondo Norte', '40.00', '40', '2022-06-06 22:07:46'),
+(11, 'hfBl', '1', 'Camiseta Hombre', '30.00', '30', '2022-06-07 12:56:14'),
+(12, 'JMFTU', '1', 'Camiseta Mujer', '35.00', '35', '2022-06-07 13:00:28'),
+(13, '59eQG', '1', 'Camiseta Mujer', '35.00', '35', '2022-06-07 13:01:33'),
+(14, 'krsTt', '1', 'Camiseta Mujer', '35.00', '35', '2022-06-07 13:01:43'),
+(15, 'Oa4JP', '1', 'Camiseta Mujer', '35.00', '35', '2022-06-07 13:03:13'),
+(16, 'lNhhb', '1', 'Camiseta Mujer', '35.00', '35', '2022-06-07 13:05:17'),
+(17, 'iQm05', '1', 'Camiseta Mujer', '35.00', '35', '2022-06-07 13:07:13'),
+(18, 'W6fMy', '1', 'Camiseta Mujer', '35.00', '35', '2022-06-07 13:07:29'),
+(19, 'SUSeK', '1', 'Camiseta Mujer', '35.00', '35', '2022-06-07 13:07:56'),
+(20, '3IMF', '1', 'Camiseta Mujer', '35.00', '35', '2022-06-07 13:08:33');
 
 -- --------------------------------------------------------
 
@@ -158,9 +181,9 @@ CREATE TABLE `productos` (
 --
 
 INSERT INTO `productos` (`idp`, `nombre`, `foto`, `precio`, `cantidad`) VALUES
-(0, 'Camiseta Hombre', 'cam1.jpg', '30.00', 100),
-(1, 'Camiseta Mujer', 'cam2.jpg', '35.00', 80),
-(2, 'Chandal Equipo', 'chandal.jpg', '60.00', 50);
+(1, 'Camiseta Hombre', 'cam1.jpg', '30.00', 100),
+(2, 'Camiseta Mujer', 'cam2.jpg', '35.00', 50),
+(3, 'Chandal Equipo', 'chandal.jpg', '60.00', 50);
 
 -- --------------------------------------------------------
 
@@ -169,10 +192,11 @@ INSERT INTO `productos` (`idp`, `nombre`, `foto`, `precio`, `cantidad`) VALUES
 --
 
 CREATE TABLE `usuario` (
+  `id` int(11) NOT NULL,
+  `email` varchar(100) NOT NULL,
   `nombre` varchar(100) NOT NULL,
   `p_apellido` varchar(100) NOT NULL,
   `s_apellido` varchar(100) NOT NULL,
-  `email` varchar(100) NOT NULL,
   `password` varchar(255) NOT NULL,
   `fecha_nacimiento` date NOT NULL,
   `genero` enum('Hombre','Mujer','Otro') NOT NULL,
@@ -183,9 +207,13 @@ CREATE TABLE `usuario` (
 -- Volcado de datos para la tabla `usuario`
 --
 
-INSERT INTO `usuario` (`nombre`, `p_apellido`, `s_apellido`, `email`, `password`, `fecha_nacimiento`, `genero`, `rol`) VALUES
-('Daniel', 'Ortega', 'Robles', 'asdasda@gmail.com', '$2y$10$iPY4N.e2u0fPPPtNweVSIOZApku5BsCEsjpwa/7MEEj9QnlsnIWZe', '2000-07-22', 'Hombre', 0),
-('Javier', 'Lopez', 'Sanchez', 'javier@hotmail.com', '$2y$10$qOyl/fpAJUtXdtqO3GSNYus5rR33KHm2iB1WyYFfLUo/uIsgqpPzi', '2022-06-06', 'Mujer', 1);
+INSERT INTO `usuario` (`id`, `email`, `nombre`, `p_apellido`, `s_apellido`, `password`, `fecha_nacimiento`, `genero`, `rol`) VALUES
+(1, 'asdasda@gmail.com', 'Daniel', 'Ortega', 'Pereza', '$2y$10$iPY4N.e2u0fPPPtNweVSIOZApku5BsCEsjpwa/7MEEj9QnlsnIWZe', '2022-06-21', 'Otro', 0),
+(3, 'usuario@gmail.com', 'Usuario', 'Usu', 'arioda', '$2y$10$cwpaYhMCdYzJJngjY3KmSO/iGUw6a2CVRIjiWrOe5qTHs/vWAO.B.', '2022-06-22', 'Mujer', 1),
+(4, 'antonio@gmail.com', 'antonio', 'Lopez', 'as', '$2y$10$YWwTdUn0SwcDXeXzi9a.KuXgdAfy74uCqySqcUUUIQ2DS0rv.gMsG', '2013-10-30', 'Hombre', 1),
+(5, 'rafa@fgmail.com', 'Rafael', 'pru', 'eba', '$2y$10$G1Zjdivb.xmU6CCoIB8Is.6jnzPcF94HhTkny.m5VO9yafAR4qFLK', '2008-05-15', 'Hombre', 1),
+(6, 'pablo@gmail.com', 'pablo', 'pa', 'blo', '$2y$10$Iwy2AWsARXy/O7//.pd2.OWdhuHBeQf1O8xr83gUVWTDODwOG.Wlq', '2001-08-31', 'Hombre', 0),
+(7, 'admin@gmial.com', 'admin', 'admin', 'admin', '$2y$10$53I7m3cTg.3l0.kJ965aCeG1mPj.W89lbOTdLkcPhFMVEJB.Kzr0C', '1993-10-13', 'Hombre', 0);
 
 --
 -- Índices para tablas volcadas
@@ -210,6 +238,12 @@ ALTER TABLE `pedido_cliente_cp`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indices de la tabla `pedido_cp`
+--
+ALTER TABLE `pedido_cp`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indices de la tabla `pedido_datos_cp`
 --
 ALTER TABLE `pedido_datos_cp`
@@ -225,7 +259,7 @@ ALTER TABLE `productos`
 -- Indices de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  ADD PRIMARY KEY (`email`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -241,13 +275,31 @@ ALTER TABLE `detalle_pedido`
 -- AUTO_INCREMENT de la tabla `pedido_cliente_cp`
 --
 ALTER TABLE `pedido_cliente_cp`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+
+--
+-- AUTO_INCREMENT de la tabla `pedido_cp`
+--
+ALTER TABLE `pedido_cp`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT de la tabla `pedido_datos_cp`
 --
 ALTER TABLE `pedido_datos_cp`
-  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+
+--
+-- AUTO_INCREMENT de la tabla `productos`
+--
+ALTER TABLE `productos`
+  MODIFY `idp` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT de la tabla `usuario`
+--
+ALTER TABLE `usuario`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

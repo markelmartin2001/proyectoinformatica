@@ -19,6 +19,15 @@
     $consulta2->execute();
     $resultados2=$consulta2->fetchAll(PDO::FETCH_ASSOC);
 
+    $query3 ="SELECT t.ref, t.estado, t.medio, t.total, t2.cantidad, t2.articulo, t2.precio, t3.ref AS cref, t2.total AS 'total_precio', t3.nombre 
+    FROM base_trabajo.pedido_cp t
+    LEFT JOIN base_trabajo.pedido_datos_cp t2 ON t.ref = t2.ref
+    LEFT JOIN base_trabajo.pedido_cliente_cp t3 ON t.cliente = t3.ref
+    GROUP BY t.ref";
+    $consulta3 = $conex->prepare($query3);
+    $consulta3->execute();
+    $resultados3=$consulta3->fetchAll(PDO::FETCH_ASSOC);
+
 
 ?>
 
@@ -130,30 +139,30 @@
             <!-- NO HECHO -->
             <div class="container p-4 cruddiv">
             <h1>Pedidos</h1>
-            <a href="create.php?table=pe" class="btn btn-success"><i class="fas fa-plus"></i></a>
             <div class="table">
             <table id=pedidos class=" crudt table table-striped table-hover">
                 <thead class="table-dark">
                     <tr>
+                        <th>#</th>
+                        <th>Referencia</th>
                         <th>Nombre</th>
-                        <th>Email</th>
-                        <th>Fecha de nacimiento</th>
-                        <th>Genero</th>
-                        <th>Rol</th>
-                        <th></th>
+                        <th>total</th>
+                        <th>Esatdo</th>
                     </tr>
                 </thead>
-                <tbody class="table-light">
-                    <?php foreach($resultados1 as $resultado1){?>
-                        <tr class=crudtr >
-                            <td><?php echo $resultado1["p_apellido"]." ". $resultado1["s_apellido"]." , ".$resultado1["nombre"];?></td>
-                            <td><?php echo $resultado1["email"];?></td>
-                            <td><?php echo $resultado1["fecha_nacimiento"];?></td>
-                            <td><?php echo $resultado1["genero"];?></td>
-                            <td><?php echo $resultado1["rol"];?></td>
-                            <td></td>
-                            
-                        </tr>
+                <tbody class="table-light"><?php
+                        $num =0;
+                        foreach($resultados3 as $resultado3){
+                            $num++ ?>
+                        
+                            <tr class=crudtr >
+                                <th><?php echo $num;?></th>
+                                <td><?php echo $resultado3["ref"];?></td>
+                                <td><?php echo $resultado3["nombre"];?></td>
+                                <td><?php echo $resultado3["total"];?></td>
+                                <td><?php echo $resultado3["estado"];?></td>
+                                
+                            </tr>
                     <?php } ?>
                 </tbody>
             </table>

@@ -30,7 +30,7 @@
 	display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-	width: 50%;
+	width: 60%;
     height: auto;
     top: 20%;
     margin-left: 25%;
@@ -71,7 +71,7 @@
     font-size:30px;
     width:80%;
     margin-left:10%;
-    margin-top:10%;
+    margin-top:5%;
     box-shadow: 0px 0px 10px black;
 }
 
@@ -114,6 +114,7 @@
 
 .forment{
     width:50%;
+    min-width:400px;
     margin-bottom:8%;
     border-radius:10px;
 }

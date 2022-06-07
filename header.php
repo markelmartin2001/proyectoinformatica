@@ -162,6 +162,21 @@
         padding:0;
     }
 
+    #emcarr{
+			
+			width:40%;
+			min-width:400px;
+			height:60%;
+			position:absolute;
+			left:60%;
+		}
+		.car{
+			margin-left:70%;
+			min-width:100px;
+			width:25%;
+			float:left;
+			font-size:20px;
+		}
 </style>
 <!--Carrito  -->
 </head>
@@ -181,7 +196,7 @@
                         <li>
                             <a href=""><?= $user['email']; ?></a>
                             <ul>
-                                <li><a>Pedidos</a></li>
+                                
                                 <li><a href="logout.php">Cerrar Sesión</a></li>
                             <?php if($_SESSION['rol']==0): ?>
                                 <li><a href="admin.php">Admin</a></li>

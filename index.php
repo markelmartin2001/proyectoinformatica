@@ -8,13 +8,7 @@
     <link rel="stylesheet" href="styles.css">
     <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica:ital@1&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica:ital@1&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@665&family=IM+Fell+DW+Pica:ital@1&family=Righteous&family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+    
 </head>
 <style>
 
@@ -32,7 +26,6 @@ body{
 .container_cards{
   max-width : 1200px;
   margin:auto;
-  margin-top: 100px;
   display:flex;
   flex-wrap:wrap;
   justify-content: center;
@@ -135,15 +128,15 @@ body{
   background: #1c0d02;
 }
 
+.container{
+  margin-top:5%;
+  margin-bottom:5%;
+}
 
-
-
-
-
-
-
-
-
+.container h1{
+  font-weight:bold;
+  margin-left:25%;
+}
   </style>
 
 
@@ -151,7 +144,8 @@ body{
 
 <?php require 'header.php'?>
 
-
+<div class="container">
+<h1>ULTIMOS FICHAJES MASCULINOS</h1>
 <div class="container_cards">
 
   <div class="card">
@@ -191,8 +185,9 @@ body{
   </div>
 
 </div>
-
-
+</div>
+<div class="container">
+<h1>ULTIMOS FICHAJES FEMENINOS</h1>
 <div class="container_cards">
 
   <div class="card">
@@ -230,7 +225,7 @@ body{
       <input type="button" value="Leer mas">
     </div>
   </div>
-
+</div>
 </div>
   <!-- <title>Resumenes de los ultimos partidos</title> -->
   

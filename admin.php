@@ -39,12 +39,16 @@
 
         .cruddiv{
            height:60%;
-           overflow: auto;
+           
         }
 
         .img{
             width:40%;
             height:100;
+        }
+        .table{
+            overflow: auto; 
+            max-height:50vh;
         }
     </style>
     </head>
@@ -53,6 +57,8 @@
         <div class="container p-4">    
             <div class="container p-4 cruddiv">
             <h1>Usuarios</h1>
+            <a href="create.php?table=u" class="btn btn-success"><i class="fas fa-plus"></i></a>
+            <div class="table">
             <table id=usuarios class=" crudt table table-striped table-hover">
                 <thead class="table-dark">
                     <tr>
@@ -75,8 +81,8 @@
                             <td><?php echo $resultado1["genero"];?></td>
                             <td><?php echo $resultado1["rol"];?></td>
                             <td>
-                                <a href="edit.php?id=<?php echo $resultado1["id"]?>" class="btn btn-primary"><i class="fas fa-marker"></i></a>
-                                <a href="delete.php?id=<?php echo $resultado1["id"]?>" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
+                                <a href="edit.php?id=<?php echo $resultado1["id"]?>&table=u" class="btn btn-primary"><i class="fas fa-marker"></i></a>
+                                <a href="delete.php?id=<?php echo $resultado1["id"]?>&table=u" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
                             </td>
                             
                         </tr>
@@ -84,10 +90,13 @@
                 </tbody>
             </table>
             </div>
+            </div>
 
-            <div class="container p-4 cruddiv prod">
+            <div class="container p-4 cruddiv">
             <h1>Productos</h1>
-            <table id=usuarios class=" crudt table table-striped table-hover">
+            <a href="create.php?table=p" class="btn btn-success"><i class="fas fa-plus"></i></a>
+            <div class="table">
+            <table id=products class=" crudt table table-striped table-hover">
                 <thead class="table-dark">
                     <tr>
                         <th>#</th>
@@ -104,19 +113,26 @@
                             <th><?php echo $resultado2["idp"];?></th>
                             <td><?php echo $resultado2["nombre"];?></td>
                             <td><div class=img><img height="100%" width="100%" src="productos/<?php echo $resultado2["foto"];?> "/><div></td>
-                            <td><?php echo $resultado2["precio"];?></td>
+                            <td><?php echo $resultado2["precio"];?>€</td>
                             <td><?php echo $resultado2["cantidad"];?></td>
-                            <td></td>
+                            <td>
+                                <a href="edit.php?id=<?php echo $resultado2["idp"]?>&table=p" class="btn btn-primary"><i class="fas fa-marker"></i></a>
+                                <a href="delete.php?id=<?php echo $resultado2["idp"]?>&table=p" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
+                            </td>
                             
                         </tr>
                     <?php } ?>
                 </tbody>
             </table>
             </div>
+            </div>
 
+            <!-- NO HECHO -->
             <div class="container p-4 cruddiv">
             <h1>Pedidos</h1>
-            <table id=usuarios class=" crudt table table-striped table-hover">
+            <a href="create.php?table=pe" class="btn btn-success"><i class="fas fa-plus"></i></a>
+            <div class="table">
+            <table id=pedidos class=" crudt table table-striped table-hover">
                 <thead class="table-dark">
                     <tr>
                         <th>Nombre</th>
@@ -141,6 +157,7 @@
                     <?php } ?>
                 </tbody>
             </table>
+            </div>
             </div>
         </div>
 

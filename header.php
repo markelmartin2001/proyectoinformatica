@@ -42,7 +42,12 @@
 ?>
 <head>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
-    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
     <link rel="stylesheet" href="./styles.css">
     <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -72,7 +77,7 @@
         min-height:20%;
         background-color: white;
         border: solid black 3px;
-        left:55%;
+        left:72%;
         top: 50%;
         z-index: 3;
     }
@@ -190,7 +195,7 @@
             </div>
                 <?php else: ?>
              <div id=logreg>    
-                <div class="login"><img src="Pictures/login.png"><a href="login.php" ><h1>Login<h1></a></div>
+                <div class="login"><a href="login.php" ><h1>Login<h1></a></div>
                 <button class=sing><img class="escudo" src="Pictures/escudob.png"><a href="signup.php" id="regis"> Regístrate</a></button>
             </div>   
             <?php endif; ?>    

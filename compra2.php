@@ -56,9 +56,9 @@
         }
 
         .datos {
-            height: 10%;
+            height: 60%;
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             flex-wrap: wrap;
             justify-content: space-evenly;
             align-items: center;
@@ -67,9 +67,9 @@
             display: flex;
             flex-wrap: wrap;
             flex-direction: column;
-            justify-content: space-evenly;
-            height:50%;
-            width:40%;
+            height: 50%;
+            width: 45%;
+            align-content: space-around;
         }
         .dato1{
             font-size:22px;
@@ -78,6 +78,10 @@
 
         .dato2{
             width:50%;
+        }
+
+        .comp2form{
+            height:40%;
         }
     </style>
 </head>
@@ -156,10 +160,10 @@ $consulta = $conex->prepare($sql);
 $consulta->execute();
 $resultado=$consulta->fetchAll(PDO::FETCH_ASSOC);
 ?>
+<div class="comp2form container">
+<form action="pagar.php" method="POST" validate>
 
-<form action="pagar.php" method="POST" novalidate>
-
-    <p style="font-weight: bold; font-size: 22px; text-align: center;">Datos de envío</p>
+    <h3 style="font-weight: bold; font-size: 22px; text-align: center;">Datos de envío</h3>
     <div class = datos>
     <input type="hidden" name="dato" value="insertar" >
     <div class="cajadato">
@@ -183,13 +187,11 @@ $resultado=$consulta->fetchAll(PDO::FETCH_ASSOC);
         <input type="text" class="dato2" id="validationCustom04" name="telefono" value=""  required>
     
     </div>
-
+    <button  class="btn btn-success m-4" type="submit">Pagar y finalizar</button>
     </div>
-    <button  class="btn btn-success mb-4" type="submit">Pagar y finalizar</button>
+    
 
-</form>            
-        <!-- <div class="">
-           <a class="finalizar" type=button href="compra2.php">Continuar</a>
-        </div> -->
+    </form>            
+        </div>
     </div>
 </body>

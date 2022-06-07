@@ -12,7 +12,7 @@
 
 <head>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-    <link rel="stylesheet" href="styles.css">
+    
     <style>
         ::-webkit-scrollbar {
             display: none;
@@ -83,10 +83,7 @@
                     }
             if(!isset($total)){$total = '0';}else{$total = $total;}
             echo $total;?>€</h1>
-        </div>
-        <div class="fin2">
-           <a class="finalizar" type=button href="compra2.php">Continuar</a>
-        </div>
+            <h1><a class=" btn btn-light  m-4 p-2 font-weight-bold" href="compra2.php">Continuar</a></h1>
         </div>
         <div>
     </div>

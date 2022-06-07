@@ -29,8 +29,7 @@
     #prods{
         position: relative;
         top:15%;
-        width:60%;
-        left:20%;
+        width:65%;
         display:flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -50,17 +49,20 @@
         width:100%;
         display:flex;
         flex-wrap: wrap;
-        box-shadow: 3px 10px 20px black;
-        height:auto;
+        
+        height:101%;
     }
 
     #formulario{
-        width:45%;
+        width:45vh;
         height:50%;
+        min-width: 300px;
+        min-height: 400px;
         background-color:white;
         margin-bottom:10%;
-        border:3px solid black;
+        border:4px solid black;
         border-radius:10px;
+        box-shadow: 3px 10px 20px black;
 
     }
     
@@ -87,7 +89,14 @@
     .b{
         width: 40%;
         margin-left: 10%;
-        height:2em;
+        height:5vh;
+    }
+
+    .f{
+        display:flex;
+        width:100%;
+        height:40vh;
+        justify-content: space-around;
     }
 
 .boton_comprar{
@@ -113,6 +122,7 @@
     color:gray;
 }
 
+
 </style>
 </head>
 
@@ -120,13 +130,13 @@
 
     
 
-    <div id="prods" >
+    <div id="prods" class="container" >
         <?php
         foreach($resultados as $resultado){?>
         <form id="formulario" name="formulario" method="post" action="cart.php">
         <div class="prod">
             <div class="n"><h2><?php echo $resultado["nombre"]?><h2></div >
-            <div class="f"><img height="100%" width="100%" src="productos/<?php echo $resultado["foto"];?> "/></div>
+            <div class="f"><img height="90%" width="80%" src="productos/<?php echo $resultado["foto"];?> "/></div>
             <div class="p"><h2 class="h2"><?php echo $resultado["precio"]?> €<h2></div>
             <div>
                 <input name="nombre" type="hidden" id="nombre" value="<?php echo $resultado["nombre"];?>"/>

@@ -54,9 +54,9 @@ session_start();
     <h3><?php echo $message?></h3>
     <h1>Login</h1>
     </div>
-    <form action="login.php" method="POST" class= formlog>
-      <input name="email" type="text" class=inpform placeholder="Email">
-      <input name="password" type="password" class=inpform placeholder="Contraseña">
+    <form action="login.php" method="POST" class= formlog validate>
+      <input name="email" type="text" class=inpform placeholder="Email" required>
+      <input name="password" type="password" class=inpform placeholder="Contraseña" required>
       <input type="submit" class=submit value="Submit">
     </form>
     <a href="index.php">Inicio</a>

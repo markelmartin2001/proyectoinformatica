@@ -20,9 +20,9 @@
 <body>
     <?php require 'header.php'?>
 
-    <div class="titulo">
-    <h1>FOTOS DEL ULTIMO PARTIDO</h1>
-</div>
+    <div class="container">
+    <h1 class="futmasc">FOTOS DEL ULTIMO PARTIDO</h1>
+
 
 
 <div class="slider">
@@ -34,6 +34,7 @@
     
    
 </ul>
+</div>
 </div>
 
 <div class="contendorgrande">
@@ -96,24 +97,25 @@
 
 
 <style>
+.container{
+  flex-direction: column;
+    align-items: center;
+}
+.futmasc{
+  height:10%;
+}
 .titulo{  
         z-index: 1;
-        position:absolute;
-        top:25%;
-        left:35%;
         font-family: Arial; 
         font-size: 100%; 
         COLOR: black; 
         text-shadow: 0px 0px 9px #508AD3;
   }
 .slider{ 
-    position: relative;
-    top: 20%;
-    left:25%;
+  height:85%;
     width:50%;
     overflow: hidden;
     z-index: 0;
-    margin-top: 100px;
   }
 .slider ul{
     display: flex;

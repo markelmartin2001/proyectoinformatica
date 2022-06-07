@@ -65,7 +65,7 @@
 			position:absolute;
 			display: inline-block;
 			width: 5em;
-		height: 5em;
+			height: 5em;
 			right:100%;
 		}
 
@@ -517,20 +517,7 @@ box-shadow: 3px 5px 10px black;
     align-items: center;
 
 }
-.finalizar{
-	background-color: white;
-	color:black;
-	border-radius: 8px;
-	box-sizing: border-box;
-	cursor: pointer;
-	font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-size: 22px;
-	font-weight: bold;
-	height:50%;
-	padding: 10px 16px;
-	text-align: center;
-	text-decoration: none;
-}
+
 
 .finalizar:hover{
 background-color:lightgrey;
@@ -545,8 +532,7 @@ margin:0;
 }
 .fin2{	
 	text-align:center;
-	margin-top:5px;
-	height:60%;
+
 	}
 .total{
 height:15%;
@@ -625,3 +611,8 @@ height:15%;
 	color: white;
 	background: transparent;
   }
+/* Admin */
+
+ .cont{
+	margin-top: 5%;
+ }

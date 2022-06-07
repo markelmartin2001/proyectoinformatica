@@ -3,7 +3,7 @@
 include "connectBD.php";
 
 $message = '';
-if (!empty($_POST['nombre']) && !empty($_POST['p_apellido']) && !empty($_POST['s_apellido']) &&!empty($_POST['email']) && !empty($_POST['password'])) {
+if (!empty($_POST['nombre']) && !empty($_POST['p_apellido']) && !empty($_POST['s_apellido']) &&!empty($_POST['email']) && !empty($_POST['password']) && !empty($_POST['fecha_nacimiento']) && !empty($_POST['rol'])) {
   if($_POST['cpassword']==$_POST['password']){
     $sql = "INSERT INTO usuario (nombre, p_apellido, s_apellido,email, password, fecha_nacimiento, genero,rol) VALUES (:nombre, :p_apellido, :s_apellido,:email, :password, :fecha_nacimiento, :genero, :rol)";
     $stmt = $conex->prepare($sql);
@@ -112,7 +112,7 @@ if (!empty($_POST['nombre']) && !empty($_POST['p_apellido']) && !empty($_POST['s
         <div class=mess>
             <h1>REGISTRATE</h1>
     </div>
-    <form action ="signup.php" method="post" class= formlog>
+    <form action ="signup.php" method="post" class= formlog validate>
         
         <input type="text" name="nombre" placeholder="NOMBRE" class=inpform required>
         
